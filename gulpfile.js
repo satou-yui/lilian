@@ -1,4 +1,4 @@
-const {watch, series, parallel, src, dest, lastRun } = require('gulp');
+const {watch, series, parallel, src, dest, lastRun, task } = require('gulp');
 const sass = require('gulp-sass')(require("sass"));
 const imagemin = require('gulp-imagemin');
 const mozjpeg = require('imagemin-mozjpeg');
@@ -6,12 +6,7 @@ const pngquant = require('imagemin-pngquant');
 const browserSync = require('browser-sync').create();
 const prettify = require('gulp-prettify');
 const del = require('del');
-
-// 削除
-const clean = (done) => {
-  del('./dist/**/*');
-  done();
-};
+const sassGlob = require("gulp-sass-glob");
 
 // HTML整形
 const htmlFormat = (done) => {
@@ -29,7 +24,8 @@ const htmlFormat = (done) => {
 
 // sassコンパイル
 const compileSass = (done) => {
-  src('./src/assets/styles/*.scss')
+  src('./src/assets/styles/style.scss')
+    .pipe(sassGlob())
     .pipe(
       sass({outputStyle: 'compressed'})
       .on('error', sass.logError)
@@ -79,14 +75,11 @@ const watchFiles = (done) =>{
   };
 
   // scssファイル変更時
-  watch('./src/assets/styles/*.scss')
+  watch('./src/assets/styles/**/*.scss')
     .on('change', series(compileSass, browserReload))
   // scssファイル追加時
-  watch('./src/assets/styles/*.scss')
+  watch('./src/assets/styles/**/*.scss')
     .on('add', series(compileSass, browserReload))
-  // 画像ファイル追加時
-  watch('./src/assets/images/*.{jpg,jpeg,png,svg,gif}')
-    .on('add', series(imageMin, browserReload));
   // htmlファイル追加時
   watch('./src/**/*.html')
     .on('add', series(htmlFormat, browserReload));
@@ -94,9 +87,8 @@ const watchFiles = (done) =>{
   watch('./src/**/*.html')
     .on('change', series(htmlFormat, browserReload));
 
-  // 画像、htmlファイル削除時
+  // htmlファイル削除時
   watch([
-    './src/assets/images/*.{jpg,jpeg,png,svg,gif}',
     './src/**/*.html'
     ])
     .on('unlink', (event) => {
@@ -105,7 +97,7 @@ const watchFiles = (done) =>{
     });
 
   // scssファイル削除時
-  watch('./src/assets/styles/*.scss')
+  watch('./src/assets/styles/**/*.scss')
     .on('unlink', (event) => {
       let path = event.replace('src', 'dist');
       path = path.replace('scss', 'css');
@@ -115,7 +107,11 @@ const watchFiles = (done) =>{
 
 // デフォルトタスク
 exports.default = series(
-  clean,
   parallel(compileSass, imageMin, htmlFormat),
   series(initBrowsersync, watchFiles),
 );
+
+task('imageMin', () => {
+  watch('./src/assets/images/*.{jpg,jpeg,png,svg,gif}')
+    .on('add', series(imageMin, browserReload));
+});
