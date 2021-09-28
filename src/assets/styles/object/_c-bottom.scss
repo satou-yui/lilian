@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+.c-botton {
+  width: 270px;
+  display: inline-block;
+  background: $sub-color;
+  color: #fff;
+  font-size: 1.1em;
+  letter-spacing: .1em;
+  padding: 10px 10px;
+  border-radius: 10px;
+  box-shadow: #E0E0E0 3px 3px 4px;
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #fff;
+    border-right: solid 2px #fff;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: -4px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+  
+}
