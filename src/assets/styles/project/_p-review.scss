@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+.p-review {
+  margin-bottom: 50px;
+  &__contents {
+    &__card {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      margin-bottom: 35px;
+      &__item {
+        width: 46%;
+        background: #fff;
+        box-shadow: #E0E0E0 2px 2px 6px;
+        padding: 10px 15px;
+        display: flex;
+        flex-direction: column;
+
+        &__heading {
+          font-size: .8em;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+        &__img {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+        &__text {
+          font-size: .7em;
+          &__from {
+            text-align: right;
+            font-size: .7em;
+            line-height: 1.7;
+            margin-top: auto;
+          }
+        }
+      }
+    }
+  }
+}
