@@ -2,7 +2,9 @@
 
 .c-botton {
   width: 270px;
-  display: inline-block;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
   background: $sub-color;
   color: #fff;
   font-size: 1.1em;
