@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+.p-question {
+  margin-bottom: 50px;
+  &__contents {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    &__item {
+      background: #F5E7E5;
+      border: 1px solid #707070;
+      margin-bottom: 20px;
+      &__link {
+        display: flex;
+        padding: 15px 20px;
+        &__icon {
+          width: 17%;
+          margin-bottom: 10px;
+          margin-right: 20px;
+          object-fit: contain;
+        }
+        &__text {
+          display: flex;
+          align-items: center;
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}
