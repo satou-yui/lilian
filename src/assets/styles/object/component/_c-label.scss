@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.c-label {
+  color: $font-color;
+  padding: 2px 5px;
+  letter-spacing: 2px;
+  border-radius: 3px;
+  font-size: .8em;
+  &--color01 {
+    background: $accent-color03;
+  }
+  &--color02 {
+    background: $accent-color02;
+  }
+}

@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+.p-info {
+  margin-bottom: 50px;
+  &__contents {
+    width: 90%;
+    margin: 0 auto ;
+    &__item {
+      position: relative;
+      border-top: 1px solid #707070;
+      padding: 15px 10px;
+      &::after {
+        border-top: solid 1px $font-color;
+        border-right: solid 1px $font-color;
+        top: 50%;
+        right: 3px;
+        }
+
+      &:last-of-type {
+        border-bottom: 1px solid #707070;
+        margin-bottom: 20px;
+      }
+      &__link {
+        display: block;
+        & time {
+          display: block;
+          color: $sub-color;
+          margin-bottom: 3px;
+        }
+      }
+    }
+  }
+}
