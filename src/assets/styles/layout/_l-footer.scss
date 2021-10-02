@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+.l-footer {
+  background: $sub-color;
+  color: #fff;
+  &__menu {
+    margin-bottom: 30px;
+  }
+  &__list {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &__item {
+    border-bottom: 1px solid #fff;
+    padding: 15px 0;
+  }
+  &__link {
+    display: block;
+  }
+  &__botton {
+    width: 80%;
+    background: #fff;
+    color: $sub-color;
+    padding: 10px;
+    font-size: 1.1em;
+  }
+  &__tel {
+    text-align: center;
+    margin-bottom: 30px;
+    &-number {
+      display: block;
+      font-size: 1.9em;
+      letter-spacing: 1.5px;
+      & img {
+        width: 30px;
+        padding-bottom: 7px;
+      }
+    }
+    &-attention {
+      font-size:.9em;
+    }
+  }
+  &__copy {
+    text-align: center;
+    background: #fff;
+    color: $font-color;
+    font-size: 1.2em;
+    line-height: 2;
+  }
+}
