@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+.l-header {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  background: #fff;
+  height: 50px;
+  &__logo {
+    display: flex;
+    align-items: center;
+    padding: 5px 0 0;
+  }
+  &__link {
+    display: block;
+    & img {
+      display: block;
+      margin: 0 auto;
+      width: 25%;
+      
+    }
+  }
+}
