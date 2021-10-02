@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+.p-gift {
+  margin-bottom: 50px;
+  &__heading {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    & img {
+      width: 45%;
+    }
+    &__contents {
+      width: 45%;
+      &__text {
+        line-height: 1.7;
+        font-size: .8em;
+        margin-bottom: 7px;
+      }
+      &__botton {
+        width: 95%;
+        font-size: .75em;
+        padding: 5px 10px;
+      }
+    }
+  }
+}
