@@ -5,14 +5,10 @@
     content: '';
     width: 7px;
     height: 7px;
-    border-top: solid 2px #fff;
-    border-right: solid 2px #fff;
     -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     position: absolute;
-    top: 50%;
-    right: 15px;
     margin-top: -4px;
   }
 }
