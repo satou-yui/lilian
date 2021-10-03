@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+.p-page-nav {
+  display: flex;
+  justify-content: center;
+  &__item {
+    background: $sub-color;
+    color: #fff;
+    width: 45px;
+    text-align: center;
+    margin: 0 5px;
+    padding: 3px 0;
+    &-active {
+      background: $accent-color02;
+    }
+  }
+  &__extend {
+    padding: 0 5px;
+  }
+}
