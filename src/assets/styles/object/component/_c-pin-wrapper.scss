@@ -2,13 +2,8 @@
 
 .c-pin-wrapper {
   width: 92%;
-  margin: 0 auto;
-  background: #fff;
+  margin: 0 auto 70px;
   box-shadow: #E0E0E0 2px 2px 6px;
-  margin-bottom: 70px;
-  &--bg-color {
-    background: $main-color;
-  }
   &__pin-inner {
     position: relative;
     padding: 5px;
