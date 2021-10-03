@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.p-addressee {
+  margin-bottom: 50px;
+  &__form {
+    width: 90%;
+    margin: 40px auto 0;
+    &__select {
+      
+      &__gift-attention {
+        font-size: .7em;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
