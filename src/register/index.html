@@ -29,7 +29,116 @@
     <!-- nav -->
     <nav></nav>
   </header> <!-- header__end -->
-<main>
+
+<main class="l-main u-fixed-top">
+
+  <!--register
+  ================================ -->
+  <section class="p-register">
+      <div class="c-pin-wrapper p-register__pin-wrapper">
+        <div class="c-pin-wrapper__pin-inner"></div>
+        <div class="c-pin-wrapper__text-inner">
+          <h2 class="p-register__heading">お花の定期便の登録</h2>
+          <figure class="p-register__img">
+            <img src="../assets/images/register01.png">
+          </figure>
+          <form action="program.php" method="post">
+            <div class="p-register__form">
+              <p class="c-input-heading">メールアドレス
+                <span class="c-label c-label--color01">必須</span>
+              </p>
+              <input class="c-input" type="email" name="email">
+
+              <p class="c-input-heading">パスワード
+                <span class="c-label c-label--color01">必須</span>
+              </p>
+              <p class="p-register__form__attention">
+                英数字８文字以上１２文字以内
+              </p>
+              <input class="c-input" type="password" name="password">
+
+            </div>
+          </form>
+          <a class="c-botton c-arrow c-register-botton" href="register/index.html">
+            [次へ]情報の入力をする
+          </a>
+          <ul class="p-register__attention">
+            <li class="p-register__attention__item">
+              ・利用規約をお読みになり同意いただける場合、次にお進みください。
+            </li>
+            <li class="p-register__attention__item">
+              ・お届け可能になり次第メールでお知らせいたします。
+            </li>
+          </ul>
+        </div>
+        <div class="c-pin-wrapper__pin-inner"></div>
+      </div>
+  </section>
 </main>
+
+<!--footer
+  ================================ -->
+  <footer class="l-footer">
+    <nav class="l-footer__menu">
+      <!-- footer__nav -->
+      <ul class="l-footer__list">
+        <li class="l-footer__item">
+          <a class="l-footer__link">
+            よくある質問
+          </a>
+        </li>
+
+        <li class="l-footer__item">
+          <a class="l-footer__link">
+            お問い合わせ
+          </a>
+        </li>
+
+        <li class="l-footer__item">
+          <a class="l-footer__link">
+            利用規約
+          </a>
+        </li>
+
+        <li class="l-footer__item">
+          <a class="l-footer__link">
+            プライバシーポリシー
+          </a>
+        </li>
+
+        <li class="l-footer__item">
+          <a class="l-footer__link">
+            運営会社
+          </a>
+        </li>
+
+        <li class="l-footer__item">
+          <a class="l-footer__link">
+            特定商取引に基づく表記
+          </a>
+        </li>
+
+      </ul>
+      <!-- footer__botton -->
+      <a class="c-botton l-footer__botton" href="../index.html">
+        TOPページへ戻る
+      </a>
+    </nav> <!-- footer__nav__end -->
+    
+    <!-- footer__tel -->
+    <div class="l-footer__tel">
+      <a href="tel:0120-XXX-XXX" class="l-footer__tel-number">
+        <img src="../assets/images/tel.png">
+        0120-XXX-XXX
+      </a>
+      <p class="l-footer__tel-attention">
+        ※受付時間：9：00〜18:00（日曜・祝日を除く）
+      </p>
+    </div> <!-- footer__tel__end -->
+    <!-- footer__copy -->
+    <p class="l-footer__copy">
+      <small>©︎2021 Lilian</small>
+    </p>
+  </footer> <!-- footer__end -->
 </body>
 </html>
