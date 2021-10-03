@@ -178,7 +178,7 @@
 
       <form action="program.php" method="post">
         <div class="p-select-form">
-          <select name="" id="">
+          <select name="flower-kind">
             <option value="gerbera">ガーベラ</option>
             <option value="mokara">モカラ</option>
             <option value="cosmos">コスモス</option>
@@ -190,8 +190,42 @@
           </select>
         </div>
       </form>
+    </section> <!-- kind_select__end -->
 
-    </section>
+    <!--concept color
+    ================================ -->
+    <section class="p-concept-color">
+      <h2 class="p-kind__heading">
+        ブーケのコンセプトカラー
+        <span class="c-label c-label--color01">必須</span>
+      </h2>
+
+      <form action="program.php" method="post">
+        <div class="p-select-form">
+          <select name="concept-color" id="">
+            <optgroup label="ビビットカラー">
+              <option value="pink-vivid">ピンク系</option>
+              <option value="blue-vivid">青系</option>
+              <option value="yellow-vivid">黄色系</option>
+              <option value="orange-vivid">オレンジ系</option>
+              <option value="purple-vivid">紫系</option>
+              <option value="red-vivid">赤系</option>
+            </optgroup>
+
+            <optgroup label="くすみカラー">
+              <option value="pink-dull">ピンク系</option>
+              <option value="blue-dull">青系</option>
+              <option value="yellow-dull">黄色系</option>
+              <option value="orange-dull">オレンジ系</option>
+              <option value="purple-dull">紫系</option>
+              <option value="red-dull">赤系</option>
+            </optgroup>
+          </select>
+        </div>
+      </form>
+
+    </section> <!-- concept_color__end -->
+
 
   </main>
 
