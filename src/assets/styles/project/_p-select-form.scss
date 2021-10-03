@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.p-select-form {
+  & select {
+    display: block;
+    width: 90%;
+    height: 35px;
+    border-radius: 3px;
+    font-size: .9em;
+    background: #F5E7E5;
+    margin: 0 auto; 
+    text-align: center;
+    border: 1px solid #bdbdbd;
+  }
+}

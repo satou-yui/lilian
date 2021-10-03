@@ -31,6 +31,45 @@
     <nav></nav>
   </header> <!-- header__end -->
 
-  
+  <main class="l-main u-fixed-top">
+
+    <!--flower flow
+    ================================ -->
+    <figure class="c-flower-flow c-flower-flow-margin">
+      <img src="../assets/images/register02.png">
+    </figure>
+
+    <!--flower select
+    ================================ -->
+    <section class="p-select">
+      <!-- select header -->
+      <div class="c-pin-wrapper c-pin-wrapper-back-color02 p-select__pin-wrapper">
+        <div class="c-pin-wrapper__pin-inner"></div>
+        <div class="c-pin-wrapper__text-inner c-pin-inner-heading-padding">
+          <h2 class="c-pin-inner-heading">お花の定期便の登録</h2>
+        </div>
+        <div class="c-pin-wrapper__pin-inner"></div>
+      </div>
+
+      <h2 class="p-select__heading">
+        生花orドライフラワーの選択
+        <span class="c-label c-label--color01">必須</span>
+      </h2>
+      <div class="p-select__img">
+        <img src="../assets/images/flower.jpeg">
+        <img src="../assets/images/dried_flower.jpeg">
+      </div>
+      
+      <form action="program.php" method="post">
+        <div class="p-select-form">
+          <select name="flower-select" id="">
+            <option value="flower" selected>生花</option>
+            <option value="dried flower">ドライフラワー</option>
+          </select>
+        </div>
+      </form>
+    </section> <!-- select_end -->
+  </main>
+
 </body>
 </html>
