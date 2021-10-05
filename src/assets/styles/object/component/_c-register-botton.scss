@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+.c-register-botton {
+  width: 270px;
+  font-size: 1.1em;
+  letter-spacing: .1em;
+  padding: 10px 10px;
+  background: $sub-color;
+  color: #fff;
+  box-shadow: #E0E0E0 3px 3px 4px;
+  &::after {
+    border-top: solid 2px #fff;
+    border-right: solid 2px #fff;
+    top: 50%;
+    right: 15px;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}

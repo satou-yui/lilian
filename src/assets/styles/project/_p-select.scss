@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 .p-select {
-  margin-bottom: 50px;
   &__pin-wrapper {
     margin-bottom: 10px;
   }
@@ -17,5 +16,9 @@
     & img {
       width: 40%;
     }
+  }
+  &__form {
+    width: 90%;
+    margin: 0 auto;
   }
 }

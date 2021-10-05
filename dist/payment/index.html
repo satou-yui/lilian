@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/styles/reset.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <title>お花の定期便 Lilian</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!--header
+  ================================ -->
+    <header class="l-header">
+      <h1 class="l-header__logo">
+        <a class="l-header__link" href="../index.html">
+        <img src="../assets/images/logo-font.png">
+      </a>
+      </h1>
+      <!-- nav -->
+      <nav></nav>
+    </header> <!-- header__end -->
+    <main class="l-main u-fixed-top">
+      <!--flower flow
+    ================================ -->
+      <figure class="c-flower-flow c-flower-flow-margin">
+        <img src="../assets/images/register02.png">
+      </figure>
+      <!--payment
+    ================================ -->
+      <section class="p-payment">
+        <!-- heading -->
+        <div class="c-pin-wrapper c-pin-wrapper-back-color02 p-select__pin-wrapper">
+          <div class="c-pin-wrapper__pin-inner"></div>
+          <div class="c-pin-wrapper__text-inner c-pin-inner-heading-padding">
+            <h2 class="c-pin-inner-heading">お支払い金額 </h2>
+          </div>
+          <div class="c-pin-wrapper__pin-inner"></div>
+        </div>
+        <div class="p-payment__acd">
+          <input id="acd-check1" class="p-payment__acd__check" type="checkbox">
+          <label class="p-payment__acd__label" for="acd-check1">
+            <p class="p-payment__acd__label__head">合計金額<span>（送料・税込）</span></p>
+            <p class="p-payment__acd__label__million">８９６<span>円</span></p>
+          </label>
+          <div class="p-payment__acd__contents">
+            <!-- <h3 class="p-payment__acd__contents__heading">内訳</h3> -->
+            <div class="p-payment__acd__contents__item">
+              <div class="p-payment__acd__contents__item__heading">商品金額</div>
+              <div class="p-payment__acd__contents__item__desc">８８０円</div>
+            </div>
+            <div class="p-payment__acd__contents__item">
+              <div class="p-payment__acd__contents__item__heading">送料</div>
+              <div class="p-payment__acd__contents__item__desc">２８０円</div>
+            </div>
+            <div class="p-payment__acd__contents__item">
+              <div class="p-payment__acd__contents__item__heading"> 初回割引<span>（30%オフ）</span>
+              </div>
+              <div class="p-payment__acd__contents__item__desc">-２６４円</div>
+            </div>
+          </div>
+        </div>
+      </section> <!-- payment__end -->
+      <!--credit card
+    ================================ -->
+      <section class="p-credit-card">
+        <!-- heading -->
+        <div class="c-pin-wrapper c-pin-wrapper-back-color02 p-select__pin-wrapper">
+          <div class="c-pin-wrapper__pin-inner"></div>
+          <div class="c-pin-wrapper__text-inner c-pin-inner-heading-padding">
+            <h2 class="c-pin-inner-heading">お支払い金額 </h2>
+          </div>
+          <div class="c-pin-wrapper__pin-inner"></div>
+        </div>
+        <div class="p-credit-card__contents">
+          <div class="p-credit-card__contents__list">
+            <p class="p-credit-card__contents__list__text">ご利用カード一覧</p>
+            <img src="../assets/images/card.png">
+          </div>
+          <div class="p-credit-card__contents__form">
+            <form action="program.php" method="post">
+              <div class="p-credit-card__contents__form__select">
+                <p class="c-input-heading">カード番号 </p>
+                <input class="c-input" type="text" name="card-number" required>
+              </div>
+              <div class="p-credit-card__contents__form__select">
+                <p class="c-input-heading">有効期限</p>
+                <input class="c-input p-credit-card__contents__form__select__input" type="text" name="card-month" placeholder="月" required>
+                <span class="p-credit-card__contents__form__select__text">/</span>
+                <input class="c-input p-credit-card__contents__form__select__input" type="text" name="card-yead" placeholder="年" required>
+              </div>
+              <div class="p-credit-card__contents__form__select">
+                <p class="c-input-heading">名義人</p>
+                <input class="c-input" type="text" name="name" required>
+              </div>
+              <div class="p-credit-card__contents__form__select">
+                <p class="c-input-heading">セキュリティコード</p>
+                <input class="c-input p-credit-card__contents__form__select__input" type="text" name="card-security" required>
+              </div>
+              <input class="c-botton c-register-botton" type="submit" name="submit" value="[次へ]ご注文内容の確認" onclick="location.href='#'">
+            </form>
+          </div>
+        </div>
+      </section> <!-- credit-card__end -->
+      <!--footer
+  ================================ -->
+      <footer class="l-footer">
+        <nav class="l-footer__menu">
+          <!-- footer__nav -->
+          <ul class="l-footer__list">
+            <li class="l-footer__item">
+              <a class="l-footer__link">
+            よくある質問
+          </a>
+            </li>
+            <li class="l-footer__item">
+              <a class="l-footer__link">
+            お問い合わせ
+          </a>
+            </li>
+            <li class="l-footer__item">
+              <a class="l-footer__link">
+            利用規約
+          </a>
+            </li>
+            <li class="l-footer__item">
+              <a class="l-footer__link">
+            プライバシーポリシー
+          </a>
+            </li>
+            <li class="l-footer__item">
+              <a class="l-footer__link">
+            運営会社
+          </a>
+            </li>
+            <li class="l-footer__item">
+              <a class="l-footer__link">
+            特定商取引に基づく表記
+          </a>
+            </li>
+          </ul>
+          <!-- footer__botton -->
+          <a class="c-botton l-footer__botton" href="../index.html">
+        TOPページへ戻る
+      </a>
+        </nav> <!-- footer__nav__end -->
+        <!-- footer__tel -->
+        <div class="l-footer__tel">
+          <a href="tel:0120-XXX-XXX" class="l-footer__tel-number">
+        <img src="../assets/images/tel.png">
+        0120-XXX-XXX
+      </a>
+          <p class="l-footer__tel-attention"> ※受付時間：9：00〜18:00（日曜・祝日を除く） </p>
+        </div> <!-- footer__tel__end -->
+        <!-- footer__copy -->
+        <p class="l-footer__copy">
+          <small>©︎2021 Lilian</small>
+        </p>
+      </footer> <!-- footer__end -->
+    </main>
+  </body>
+</html>

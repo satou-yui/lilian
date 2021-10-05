@@ -4,13 +4,344 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>インデックスページ</title>
+    <link rel="stylesheet" href="assets/styles/reset.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <title>お花の定期便 Lilian</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
   </head>
   <body>
-    <main>
-      <p>indexページです</p>
-      <img src="./assets/images/child.jpg" alt="子供" width="300px">
-      <a href="./menu">メニューへ</a>
+    <!--header
+  ================================ -->
+    <header class="p-header">
+      <h1 class="p-header__logo"><img src="assets/images/logo.png"></h1>
+      <p class="p-header__catch">あなたのお家に「かわいい」の贈り物<br>お花の定期便</p>
+      <!-- nav -->
+      <nav></nav>
+    </header> <!-- header__end -->
+    <main class="l-main p-about-back-color">
+      <!--about
+    ================================ -->
+      <section class="p-about">
+        <!-- heading -->
+        <h2 class="c-heading">Lilianとは</h2>
+        <div class="c-pin-wrapper c-pin-wrapper-back-color01">
+          <div class="c-pin-wrapper__pin-inner"></div>
+          <p class="c-pin-wrapper__text-inner"> 「かわいい」をコンセプトに作成したブーケを、<br class="br-sp">
+          月２回お届けする「お花の定期便サービス」です。 </p>
+          <div class="c-pin-wrapper__pin-inner"></div>
+        </div>
+        <!-- about contents -->
+        <div class="p-about__contents">
+          <div class="p-about__contents__head"> 初回注文３０％オフ！ </div>
+          <img class="p-about__contents__img p-about__contents__img--color01" src="assets/images/about_01.jpeg">
+          <div class="p-about__contents__text"> グリーンを合わせて５〜７本のブーケ<br>
+          ８８０円/別途送料+２８０円 </div>
+          <a class="c-botton c-arrow c-register-botton" href="register/index.html">
+          お花の定期便を登録する
+        </a>
+        </div>
+        <div class="p-about__contents">
+          <div class="p-about__contents__head"> 初回注文1０％オフ！ </div>
+          <img class="p-about__contents__img p-about__contents__img--color02" src="assets/images/about_02.jpeg">
+          <div class="p-about__contents__text"> Lilianのお花を飾るのにちょうどいい<br>
+          サイズの花瓶を一緒に注文できます。 </div>
+          <a class="c-botton c-arrow c-register-botton" href="#">
+          花瓶の注文をする
+        </a>
+        </div>
+      </section> <!-- about__end -->
+      <!--  feature contents -->
+      <section class="p-feature">
+        <div class="p-feature__wrapper">
+          <figure class="p-feature__img">
+            <img src="assets/images/select_01.png">
+          </figure>
+          <div class="p-feature__contents">
+            <h2 class="p-feature__contents__heading p-feature__contents__heading--bg-color01"> お花の選択 </h2>
+            <ol class="p-feature__contents__list">
+              <li class="p-feature__contents__list__item"> 生花・ドライフラワーの選択 </li>
+              <li class="p-feature__contents__list__item"> お花の種類の選択 </li>
+              <li class="p-feature__contents__list__item"> ブーケのコンセプトカラーの選択 </li>
+            </ol>
+            <div class="p-feature__contents__desc-wrapper">
+              <p class="p-feature__contents__desc-wrapper__text"> お客様が選んだお花・コンセプトカラーに合わせ、プロが 「かわいい」ブーケをお作りし、お届けします。<br>
+              お花は元気な状態を保てるよう専用のBOXに入れポストに
+              投函します。お忙しい方でも安心してご利用ください。 </p>
+            </div>
+          </div>
+        </div>
+        <div class="p-feature__wrapper">
+          <figure class="p-feature__img">
+            <img src="assets/images/select_02.png">
+          </figure>
+          <div class="p-feature__contents">
+            <h2 class="p-feature__contents__heading p-feature__contents__heading--bg-color02"> 簡単に飾れる </h2>
+            <div class="p-feature__contents__desc-wrapper">
+              <p class="p-feature__contents__desc-wrapper__text"> Lilianではお花をそのまま飾れるように茎をカットしてお届けしています。届いたお花をそのまま花瓶に入れて飾ってください。<br>
+              生花の場合はオリジナルの「栄養剤」をセットでお届けしているのでこまめは水換えは不要です。 </p>
+            </div>
+          </div>
+        </div>
+      </section> <!-- feature__end -->
+      <!--flow
+    ================================ -->
+      <section class="p-flow">
+        <h2 class="c-heading">お届けまでの流れ</h2>
+        <div class="c-pin-wrapper c-pin-wrapper-back-color02">
+          <div class="c-pin-wrapper__pin-inner"></div>
+          <p class="c-pin-wrapper__text-inner"> ご希望のお花、お届け曜日を選択の上<br>
+          お申し込みください。到着後、次回の<br>
+          お申し込み、または停止をお願いします。 </p>
+          <div class="c-pin-wrapper__pin-inner"></div>
+        </div>
+        <div class="p-flow__wrapper">
+          <ul class="p-flow__wrapper__contents">
+            <li class="p-flow__wrapper__contents__item">
+              <figure class="p-flow_wrapper__centents__item__figure">
+                <img class="p-flow__wrapper__contents__item__figure__img p-flow__wrapper__contents__item__figure__img-select" src="assets/images/select.png">
+              </figure>
+              <div class="p-flow__wrapper__contents__item__text">
+                <h2 class="p-flow__wrapper__contents__item__heading c-mb-10"> STEP１ </h2>
+                <div class="p-flow__wrapper__contents__item__desc"> お花の種類・カラー<br>
+                お届け曜日の選択 </div>
+              </div>
+            </li>
+            <div class="p-triangle"></div>
+            <li class="p-flow__wrapper__contents__item">
+              <figure class="p-flow_wrapper__centents__item__figure">
+                <img class="p-flow__wrapper__contents__item__figure__img p-flow__wrapper__contents__item__figure__img-maill" src="assets/images/mail.png">
+              </figure>
+              <div class="p-flow__wrapper__contents__item__text">
+                <h2 class="p-flow__wrapper__contents__item__heading c-mb-10"> STEP２ </h2>
+                <div class="p-flow__wrapper__contents__item__desc"> ご注文完了<br>
+                メールにてお知らせ </div>
+              </div>
+            </li>
+            <div class="p-triangle"></div>
+            <li class="p-flow__wrapper__contents__item">
+              <figure class="p-flow_wrapper__centents__item__figure">
+                <img class="p-flow__wrapper__contents__item__figure__img p-flow__wrapper__contents__item__figure__img-track" src="assets/images/trackicon.png">
+              </figure>
+              <div class="p-flow__wrapper__contents__item__text">
+                <h2 class="p-flow__wrapper__contents__item__heading c-mb-10"> STEP３ </h2>
+                <div class="p-flow__wrapper__contents__item__desc"> 商品発送<br>
+                メールにてお知らせ </div>
+              </div>
+            </li>
+            <div class="p-triangle"></div>
+            <li class="p-flow__wrapper__contents__item">
+              <figure class="p-flow_wrapper__centents__item__figure">
+                <img class="p-flow__wrapper__contents__item__figure__img p-flow__wrapper__contents__item__figure__img-bouquet" src="assets/images/bouquet.png">
+              </figure>
+              <div class="p-flow__wrapper__contents__item__text">
+                <h2 class="p-flow__wrapper__contents__item__heading c-mb-10"> STEP４ </h2>
+                <div class="p-flow__wrapper__contents__item__desc"> 商品到達 </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <a class="c-botton c-arrow c-register-botton" href="register/index.html">お花の定期便を登録する</a>
+        <p class="p-attention p-flow__wrapper__attention"> 今登録すると最短 <span class="p-accent-color">１週間</span> でお届け！ </p>
+      </section> <!-- flow__end -->
+      <!--flower img
+    ================================ -->
+      <img class="p-flower-img" src="assets/images/flower.png">
+      <!--review
+    ================================ -->
+      <section class="p-review">
+        <h2 class="c-heading">ご利用者様の声</h2>
+        <div class="p-review__contents">
+          <div class="p-review__contents__card">
+            <div class="p-review__contents__card__item">
+              <div class="p-review__contents__card__item__heading c-mb-10"> 簡単にインスタ映え </div>
+              <img class="p-review__contents__card__item__img c-mb-10" src="assets/images/review_01.png">
+              <p class="p-review__contents__card__item__text"> 届くお花が全部インスタ映え！飾っても可愛いし写真に写しても可愛い！ドライフラワーも選べるのが嬉しいです。 </p>
+              <p class="p-review__contents__card__item__text__from">20代 学生 東京都</p>
+            </div>
+            <div class="p-review__contents__card__item">
+              <div class="p-review__contents__card__item__heading c-mb-10"> 家が癒しの空間に </div>
+              <img class="p-review__contents__card__item__img c-mb-10" src="assets/images/review_02.png">
+              <p class="p-review__contents__card__item__text"> ずっと気になってたお花の定期便。目につくたびに可愛いなと嬉しくなります。お花の癒し効果ってすごい！ </p>
+              <p class="p-review__contents__card__item__text__from">30代 OL 神奈川県</p>
+            </div>
+          </div>
+          <div class="p-review__contents__card">
+            <div class="p-review__contents__card__item">
+              <div class="p-review__contents__card__item__heading c-mb-10"> 届くのが楽しみ </div>
+              <img class="p-review__contents__card__item__img c-mb-10" src="assets/images/review_03.png">
+              <p class="p-review__contents__card__item__text"> かわいいがコンセプトというのに惹かれて登録しました。想像以上の可愛いさに次のお花が届くのが毎回たのしみです！ </p>
+              <p class="p-review__contents__card__item__text__from">20代 OL 北海道</p>
+            </div>
+            <div class="p-review__contents__card__item">
+              <div class="p-review__contents__card__item__heading c-mb-10"> 家が癒しの空間に </div>
+              <img class="p-review__contents__card__item__img c-mb-10" src="assets/images/review_04.png">
+              <p class="p-review__contents__card__item__text"> ずっと気になってたお花の定期便。目につくたびに可愛いなと嬉しくなります。お花の癒し効果ってすごい！ </p>
+              <p class="p-review__contents__card__item__text__from">40代 主婦 神奈川県</p>
+            </div>
+          </div>
+        </div>
+        <a class="c-botton c-arrow c-register-botton" href="register/index.html">お花の定期便を登録する</a>
+        <p class="p-attention p-review__contents__attention"> 今なら <span class="p-accent-color">
+          新規お届け１５％オフ！
+        </span>
+        </p>
+      </section> <!-- review__end -->
+      <!--question
+    ================================ -->
+      <section class="p-question">
+        <h2 class="c-heading">よくある質問</h2>
+        <div class="p-question__contents">
+          <article class="p-question__contents__item">
+            <a href="#" class="p-question__contents__item__link">
+            <img class="p-question__contents__item__link__icon" src="assets/images/q.png">
+            <h2 class="p-question__contents__item__link__text">
+              定期コースの中止やお休みはありますか？
+            </h2>
+          </a>
+          </article>
+          <article class="p-question__contents__item">
+            <a href="#" class="p-question__contents__item__link">
+            <img class="p-question__contents__item__link__icon" src="assets/images/q.png">
+            <h2 class="p-question__contents__item__link__text">
+              定期コースの再開はどうしたらいいですか？
+            </h2>
+          </a>
+          </article>
+          <article class="p-question__contents__item">
+            <a href="#" class="p-question__contents__item__link">
+            <img class="p-question__contents__item__link__icon" src="assets/images/q.png">
+            <h2 class="p-question__contents__item__link__text">
+              どんなお支払い方法がありますか？
+            </h2>
+          </a>
+          </article>
+          <a class="p-link-more c-arrow" href="#">
+          一覧をみる
+        </a>
+        </div>
+      </section> <!-- question__end -->
+      <!--info
+    ================================ -->
+      <section class="p-info">
+        <h2 class="c-heading">よくある質問</h2>
+        <div class="p-info__contents">
+          <article class="p-info__contents__item c-arrow">
+            <a class="p-info__contents__item__link" href="#">
+            <time>2021.9.2
+              <span class="c-label c-label--color01">NEW</span>
+            </time>
+            <h3 class="p-info__contents__item__link__heading">
+              9月のお花を追加しました
+            </h3>
+          </a>
+          </article>
+          <article class="p-info__contents__item c-arrow">
+            <a class="p-info__contents__item__link" href="#">
+            <time>2021.8.1</time>
+            <h3 class="p-info__contents__item__link__heading">
+              8月のお花を追加しました
+            </h3>
+          </a>
+          </article>
+          <article class="p-info__contents__item c-arrow">
+            <a class="p-info__contents__item__link" href="#">
+            <time>2021.7.22
+              <span class="c-label c-label--color02">重要</span>
+            </time>
+            <h3 class="p-info__contents__item__link__heading">
+              豪雨による到着の遅れについて
+            </h3>
+          </a>
+          </article>
+          <a class="p-link-more c-arrow" href="#">
+          一覧をみる
+        </a>
+        </div>
+      </section> <!-- info__end -->
+      <!--gift
+    ================================ -->
+      <section class="p-gift">
+        <div class="c-pin-wrapper">
+          <div class="c-pin-wrapper__pin-inner"></div>
+          <div class="c-pin-wrapper__text-inner">
+            <h3 class="p-gift__heading"> ギフトとしてもお使いいただけます </h3>
+            <div class="p-gift__wrapper">
+              <img src="assets/images/gift.png">
+              <div class="p-gift__wrapper__contents">
+                <div class="p-gift__wrapper__contents__text"> ご住所をご登録の際に<br class="sp-br">
+                  <span class="p-accent-color">
+                  ☑︎ギフトとして利用する
+                </span><br class="sp-br">
+                にチェックをいれるだけ！
+                </div>
+                <a class="c-botton p-gift__wrapper__contents__botton" href="register/index.html">お花の定期便を登録する</a>
+              </div>
+            </div>
+          </div>
+          <div class="c-pin-wrapper__pin-inner"></div>
+        </div>
+      </section> <!-- gift__end -->
     </main>
+    <!--footer
+  ================================ -->
+    <footer class="l-footer">
+      <nav class="l-footer__menu">
+        <!-- footer__nav -->
+        <ul class="l-footer__list">
+          <li class="l-footer__item">
+            <a class="l-footer__link">
+            よくある質問
+          </a>
+          </li>
+          <li class="l-footer__item">
+            <a class="l-footer__link">
+            お問い合わせ
+          </a>
+          </li>
+          <li class="l-footer__item">
+            <a class="l-footer__link">
+            利用規約
+          </a>
+          </li>
+          <li class="l-footer__item">
+            <a class="l-footer__link">
+            プライバシーポリシー
+          </a>
+          </li>
+          <li class="l-footer__item">
+            <a class="l-footer__link">
+            運営会社
+          </a>
+          </li>
+          <li class="l-footer__item">
+            <a class="l-footer__link">
+            特定商取引に基づく表記
+          </a>
+          </li>
+        </ul>
+        <!-- footer__botton -->
+        <a class="c-botton l-footer__botton" href="index.html">
+        TOPページへ戻る
+      </a>
+      </nav> <!-- footer__nav__end -->
+      <!-- footer__tel -->
+      <div class="l-footer__tel">
+        <a href="tel:0120-XXX-XXX" class="l-footer__tel-number">
+        <img src="assets/images/tel.png">
+        0120-XXX-XXX
+      </a>
+        <p class="l-footer__tel-attention"> ※受付時間：9：00〜18:00（日曜・祝日を除く） </p>
+      </div> <!-- footer__tel__end -->
+      <!-- footer__copy -->
+      <p class="l-footer__copy">
+        <small>©︎2021 Lilian</small>
+      </p>
+    </footer> <!-- footer__end -->
   </body>
 </html>

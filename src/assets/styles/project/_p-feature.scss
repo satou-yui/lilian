@@ -20,13 +20,13 @@
       position: absolute;
       width: 150px;
       height: 100px;
-      &--bg-pink {
+      &--bg-color01 {
         background: url(../images/feature_01.png) no-repeat;
         background-size: contain;
         top: 140px;
         left: 5px;
       }
-      &--bg-green {
+      &--bg-color02 {
         background: url(../images/feature02.png) no-repeat;
         background-size: contain;
         top: 140px;
@@ -50,8 +50,7 @@
       padding: 1em 10px 10px;
       &__text {
         font-size: .75em;
-        background-image:
-        linear-gradient(180deg,  rgba(100, 100, 100, 0) 90%, $sub-color 100%);
+        background:linear-gradient(transparent 95%, #D5C0AE 60%);
         background-size: 100% 2em;
         line-height: 2em;
         padding: 0em .5em 1em .5em;

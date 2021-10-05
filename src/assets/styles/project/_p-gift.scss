@@ -24,6 +24,12 @@
         width: 95%;
         font-size: .75em;
         padding: 5px 10px;
+        background: $sub-color;
+        color: #fff;
+        box-shadow: #E0E0E0 3px 3px 4px;
+        &:hover {
+          opacity: 0.8;
+        }
       }
     }
   }

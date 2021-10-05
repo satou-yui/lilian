@@ -6,7 +6,9 @@
     width: 90%;
     margin: 40px auto 0;
     &__select {
-      
+      &:last-of-type {
+        margin-bottom: 30px;
+      }
       &__gift-attention {
         font-size: .7em;
         margin-bottom: 20px;

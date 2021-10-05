@@ -2,8 +2,6 @@
 
 .p-flow {
   background: #fff;
-  text-align: center;
-  margin-bottom: 50px;
   &__wrapper {
     width: 80%;
     margin: 0 auto 50px;
@@ -14,14 +12,13 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        padding: 20px 20px;
+        padding: 20px 15px;
         margin-bottom: 15px;
         &__heading {
           text-align: center;
           color: $accent-color01;
           border-bottom: 1px dotted #707070;
           padding-bottom: 5px;
-          margin-bottom: 10px;
         }
         &__text {
           width: 50%;
@@ -50,11 +47,7 @@
       }
     }
     &__attention {
-      padding: 10px 0;
-      font-size: .9em;
-      & span {
-        color: $accent-color01;
-      }
+      padding: 15px 0 50px;
     }
   }
 }

@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+/* TOP header 
+======================*/
 .p-header {
   background: url(../images/top.png) no-repeat;
   background-size: cover;
@@ -16,8 +18,9 @@
   }
   &__catch {
     text-align: center;
-    padding: 30px;
-    font-size: 2.6vh;
+    padding: 30px 20px;
+    font-size: 2.4vh;
+    font-family: $sub-font;
     color: #fff;
     text-shadow: black 3px 2px 5px;
     line-height: 1.7;

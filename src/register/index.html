@@ -38,8 +38,8 @@
       <div class="c-pin-wrapper p-register__pin-wrapper">
         <div class="c-pin-wrapper__pin-inner"></div>
         <div class="c-pin-wrapper__text-inner">
-          <h2 class="p-register__heading">お花の定期便の登録</h2>
-          <figure class="p-register__img">
+          <h2 class="c-pin-inner-heading p-register__heading">お花の定期便の登録</h2>
+          <figure class="c-flower-flow">
             <img src="../assets/images/register01.png">
           </figure>
           <form action="program.php" method="post">
@@ -47,7 +47,7 @@
               <p class="c-input-heading">メールアドレス
                 <span class="c-label c-label--color01">必須</span>
               </p>
-              <input class="c-input" type="email" name="email">
+              <input class="c-input" type="email" name="email" required>
 
               <p class="c-input-heading">パスワード
                 <span class="c-label c-label--color01">必須</span>
@@ -55,13 +55,11 @@
               <p class="p-register__form__attention">
                 英数字８文字以上１２文字以内
               </p>
-              <input class="c-input" type="password" name="password">
+              <input class="c-input" type="password" name="password" required>
 
             </div>
+            <input class="c-botton c-register-botton" type="submit" name="submit" value="[次へ]情報の入力をする" onclick="location.href='../select/index.html'">
           </form>
-          <a class="c-botton c-arrow c-register-botton" href="register/index.html">
-            [次へ]情報の入力をする
-          </a>
           <ul class="p-register__attention">
             <li class="p-register__attention__item">
               ・利用規約をお読みになり同意いただける場合、次にお進みください。

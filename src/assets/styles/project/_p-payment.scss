@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .p-payment {
-  margin-bottom: 50px;
+  margin-bottom: 70px;
   &__acd {
     width: 90%;
     margin: 30px auto 30px;
@@ -20,12 +20,11 @@
         width: 10px;
         height: 10px;
         border: 2px solid;
-        border-color:  transparent transparent #565656 #565656;
+        border-color: transparent transparent #565656 #565656;
         transform: rotate(-45deg);
         position: absolute;
         top: 13px;
         right: 10px;
-        // transition: .5s;
       }
       &__head {
         font-size: 1.05em;
@@ -49,9 +48,17 @@
       visibility: hidden;
       transition: .5s;
       &__item {
-      height: 0;
-      opacity: 0;
-      visibility: hidden;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: none;
+        &__heading {
+          width: 50%;
+          & span {
+            color: $accent-color01;
+          }
+        }
+      }
     }
   }
 }
@@ -74,7 +81,7 @@
   padding: 5px 0; 
 }
 
-.p-payment__acd__check:checked + .p-payment__acd__label::after {}
+.p-payment__acd__check:checked + .p-payment__acd__label::after {
   border-color: #565656 #565656 transparent transparent;
   top: 15px;
 }
