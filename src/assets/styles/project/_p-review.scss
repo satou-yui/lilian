@@ -12,6 +12,10 @@
       justify-content: space-evenly;
       width: 100%;
       margin-bottom: 35px;
+      @include tb {
+        width: 95%;
+        margin: 0 auto 35px;
+      }
       &__item {
         width: 46%;
         background: #fff;
@@ -20,7 +24,7 @@
         display: flex;
         flex-direction: column;
         @include tb {
-          width: 43%;
+          width: 44%;
           padding: 15px 20px;
         }
 

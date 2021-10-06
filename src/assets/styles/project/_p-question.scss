@@ -9,6 +9,9 @@
     display: block;
     width: 90%;
     margin: 0 auto;
+    @include tb {
+      width: 85%;
+    }
     &__item {
       background: #F5E7E5;
       border: 1px solid #707070;
