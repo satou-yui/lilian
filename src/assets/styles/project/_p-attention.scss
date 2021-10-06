@@ -3,4 +3,7 @@
 .p-attention {
   font-size: .9em;
   text-align: center;
+  @include tb {
+    font-size: 1.1em;
+  }
 }

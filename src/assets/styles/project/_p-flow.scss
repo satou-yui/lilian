@@ -19,11 +19,17 @@
           color: $accent-color01;
           border-bottom: 1px dotted #707070;
           padding-bottom: 5px;
+          @include tb {
+            font-size: 1.2em;
+          }
         }
         &__text {
           width: 50%;
           text-align: center;
           font-size: .9em;
+          @include tb {
+            font-size: 1.2em;
+          }
         }
         &__figure {
           text-align: center;
@@ -32,15 +38,27 @@
             object-fit: contain;
             &-select {
               width: 80px;
+              @include tb {
+                width: 130px;
+              }
             }
             &-maill {
               width: 70px;
+              @include tb {
+                width: 90px;
+              }
             }
             &-track {
-              width: 80PX;
+              width: 80px;
+              @include tb {
+                width: 130px;
+              }
             }
             &-bouquet {
               width: 50px;
+              @include tb {
+                width: 80px;
+              }
             }
           }
         }
