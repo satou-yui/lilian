@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+.c-heading {
+  font-size: 1.4em;
+  text-align: center;
+  padding: 50px 0 30px;
+  @include tb {
+    font-size: 1.8em;
+  }
+}
