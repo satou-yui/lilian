@@ -26,9 +26,9 @@
       width: 150px;
       height: 100px;
       @include tb {
-        width: 180px;
+        width: 190px;
         height: 130px;
-        padding: 53px 28px;
+        padding: 55px 27px;
         font-size: 1.25em;
       }
       &--bg-color01 {
@@ -55,7 +55,7 @@
       width: max-content;
       margin: 0 auto 30px;
       @include tb {
-        font-size: 1.2em;
+        font-size: 1.4em;
         margin-bottom: 40px;
       }
       &__item {
@@ -69,6 +69,9 @@
       background-color: #fff;
       box-shadow: #E0E0E0 2px 2px 2px;
       padding: 1em 10px 10px;
+      @include tb {
+        width: 85%;
+      }
       &__text {
         font-size: .75em;
         background:linear-gradient(transparent 95%, #D5C0AE 60%);
@@ -76,7 +79,7 @@
         line-height: 2em;
         padding: 0em .5em 1em .5em;
         @include tb {
-          font-size: 1em;
+          font-size: 1.3em;
         }
       }
     }
