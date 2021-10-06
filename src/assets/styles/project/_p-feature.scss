@@ -3,11 +3,16 @@
 .p-feature {
   &__wrapper {
     margin-bottom: 50px;
-    position: relative;
+    
+    &__header {
+      position: relative;
+    }
   }
   &__img {
-    width: 100%;
     margin-bottom: 70px;
+    @include tb {
+      margin-bottom: 80px;
+    }
     & img {
       width: 100%;
     }
@@ -15,28 +20,44 @@
   &__contents {
     &__heading {
       color: $sub-color;
-      padding: 45px 20px;
+      padding: 43px 18px;
       font-size: 1.1em;
       position: absolute;
       width: 150px;
       height: 100px;
+      @include tb {
+        width: 180px;
+        height: 130px;
+        padding: 53px 28px;
+        font-size: 1.25em;
+      }
       &--bg-color01 {
         background: url(../images/feature_01.png) no-repeat;
-        background-size: contain;
-        top: 140px;
+        background-size: 85%;
+        bottom: -50px;
         left: 5px;
+        @include tb {
+          bottom: -65px;
+        }
       }
       &--bg-color02 {
         background: url(../images/feature02.png) no-repeat;
         background-size: contain;
-        top: 140px;
+        bottom: -50px;
         left: 5px;
+        @include tb {
+          bottom: -65px;
+        }
       }
     }
     &__list {
       list-style-type: decimal;
       width: max-content;
       margin: 0 auto 30px;
+      @include tb {
+        font-size: 1.2em;
+        margin-bottom: 40px;
+      }
       &__item {
         list-style-type: inside;
         margin-left: 26px;
@@ -54,6 +75,9 @@
         background-size: 100% 2em;
         line-height: 2em;
         padding: 0em .5em 1em .5em;
+        @include tb {
+          font-size: 1em;
+        }
       }
     }
   }
