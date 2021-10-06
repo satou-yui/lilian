@@ -8,6 +8,10 @@
   background: $sub-color;
   color: #fff;
   box-shadow: #E0E0E0 3px 3px 4px;
+  @include tb {
+    width: 350px;
+    font-size: 1.5em;
+  }
   &::after {
     border-top: solid 2px #fff;
     border-right: solid 2px #fff;
