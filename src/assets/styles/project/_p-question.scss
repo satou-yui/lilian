@@ -2,6 +2,9 @@
 
 .p-question {
   margin-bottom: 20px;
+  @include tb {
+    margin-bottom: 50px;
+  }
   &__contents {
     display: block;
     width: 90%;
@@ -13,16 +16,25 @@
       &__link {
         display: flex;
         padding: 15px 20px;
+        @include tb {
+          padding: 15px 60px;
+        }
         &__icon {
-          width: 17%;
+          width: 50px;
           margin-bottom: 10px;
           margin-right: 20px;
           object-fit: contain;
+          @include tb {
+            width: 60px;
+          }
         }
         &__text {
           display: flex;
           align-items: center;
           font-size: 1em;
+          @include tb {
+            font-size: 1.4em;
+          }
         }
       }
     }

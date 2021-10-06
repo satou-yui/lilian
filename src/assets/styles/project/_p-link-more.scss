@@ -7,6 +7,10 @@
   margin-left: auto;
   position: relative;
   font-size: .9;
+  @include tb {
+    width: 120px;
+    font-size: 1.2em;
+  }
   &::after {
   border-top: solid 2px $font-color;
   border-right: solid 2px $font-color;

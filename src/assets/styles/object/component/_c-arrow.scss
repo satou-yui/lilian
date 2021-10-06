@@ -10,5 +10,9 @@
     transform: rotate(45deg);
     position: absolute;
     margin-top: -4px;
+    @include tb {
+      width: 9px;
+      height: 9px;
+    }
   }
 }
