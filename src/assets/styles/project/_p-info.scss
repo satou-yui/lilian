@@ -2,9 +2,15 @@
 
 .p-info {
   margin-bottom: 50px;
+  @include tb {
+    margin-bottom: 80px;
+  }
   &__contents {
     width: 90%;
     margin: 0 auto ;
+    @include tb {
+      width: 85%;
+    }
     &__item {
       position: relative;
       border-top: 1px solid #707070;
@@ -22,10 +28,17 @@
       }
       &__link {
         display: block;
+        @include tb {
+          font-size: 1.3em;
+        }
         & time {
           display: block;
           color: $sub-color;
           margin-bottom: 3px;
+          
+        }
+        &__heading {
+          
         }
       }
     }
