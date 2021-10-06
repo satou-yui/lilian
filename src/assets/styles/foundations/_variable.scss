@@ -8,3 +8,17 @@ $sub-color: #8b6852;
 $accent-color01: #ff0000;
 $accent-color02: #ffd9df;
 $accent-color03: #e7eedb;
+$tb-max: 520px;
+$pc-max: 800px;
+
+@mixin tb {
+  @media screen and (min-width: $tb-max) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media screen and (min-width: $pc-max) {
+    @content;
+  }
+}
