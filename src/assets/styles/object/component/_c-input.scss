@@ -8,4 +8,8 @@
   box-shadow: 0 1px 3px #cfcfcf inset;
   padding: 7px 10px;
   margin-bottom: 20px;
+  @include tb {
+    padding: 12px 10px;
+    margin-bottom: 30px;
+  }
 }
