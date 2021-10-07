@@ -10,12 +10,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @include tb {
+    height: 70px;
+  }
   &__link {
     display: block;
     & img {
       display: block;
       margin: 0 auto;
       width: 90px;
+      @include tb {
+        width: 120px;
+      }
     }
   }
 }

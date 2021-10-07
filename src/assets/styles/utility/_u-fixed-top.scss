@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
 .u-fixed-top {
-  padding: 60px 0 0;
+  padding-top: 50px;
+  @include tb {
+    padding-top: 70px;
+  }
 }
