@@ -4,6 +4,9 @@
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
+  @include tb {
+    font-size: 1.2em;
+  }
   &__item {
     background: $sub-color;
     color: #fff;
@@ -11,6 +14,9 @@
     text-align: center;
     margin: 0 5px;
     padding: 3px 0;
+    @include tb {
+      width: 55px;
+    }
     &-active {
       background: $accent-color02;
     }

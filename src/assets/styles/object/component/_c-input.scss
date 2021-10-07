@@ -2,6 +2,7 @@
 
 .c-input {
   width: 100%;
+  height: 35px;
   border: 1px solid #bdbdbd;
   border-radius: 3px;
   background: #fcf6f6;
@@ -9,7 +10,7 @@
   padding: 7px 10px;
   margin-bottom: 20px;
   @include tb {
-    padding: 12px 10px;
+    height: 45px;
     margin-bottom: 30px;
   }
 }

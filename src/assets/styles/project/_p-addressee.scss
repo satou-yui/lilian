@@ -6,12 +6,18 @@
     width: 90%;
     margin: 40px auto 0;
     &__select {
+      @include tb {
+        font-size: 1.2em;
+      }
       &:last-of-type {
         margin-bottom: 30px;
       }
       &__gift-attention {
         font-size: .7em;
         margin-bottom: 20px;
+        @include tb {
+          font-size: .8em;
+        }
       }
     }
   }
