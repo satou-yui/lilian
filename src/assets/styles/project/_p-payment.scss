@@ -2,11 +2,17 @@
 
 .p-payment {
   margin-bottom: 50px;
+  // @include tb {
+  //   margin-bottom: 80px;
+  // }
   &__acd {
     width: 90%;
     margin: 30px auto 30px;
     border: 1px solid #707070;
     padding: 10px 20px;
+    @include tb {
+      margin: 40px auto 60px;
+    }
     &__check {
       display: none;
     }
@@ -17,7 +23,9 @@
       
       &__head {
         font-size: 1.05em;
-        
+        @include tb {
+          font-size: 1.4em;
+        }
         & span {
           font-size: .75em;
         }
@@ -27,9 +35,16 @@
         font-size: 1.3em;
         margin: 0px 30px ;
         position: relative;
+        @include tb {
+          font-size: 2em;
+          margin: 0 40px;
+        }
         & span {
           font-size: .75em;
           padding: 5px;
+          @include tb {
+            font-size: .9em;
+          }
         }
         &::after {
           content: "";
@@ -40,7 +55,13 @@
           transform: rotate(-45deg);
           position: absolute;
           top: 8px;
-          left: 250px;
+          right: -20px;
+          @include tb {
+            width: 13px;
+            height: 13px;
+            top: 15px;
+            right: -25px;
+          }
         }
       }
     }
@@ -78,6 +99,9 @@
   border-top: 1px solid #ccc;
   transition: .5s;
   margin-top: 10px;
+  @include tb {
+    font-size: 1.3em;
+  }
 }
 
 .p-payment__acd__check:checked + .p-payment__acd__label + .p-payment__acd__contents > .p-payment__acd__contents__item {
@@ -89,7 +113,7 @@
   padding: 5px 0; 
 }
 
-.p-payment__acd__check:checked + .p-payment__acd__label::after {
+.p-payment__acd__check:checked + .p-payment__acd__label > .p-payment__acd__label__million::after {
   border-color: #565656 #565656 transparent transparent;
   top: 15px;
 }

@@ -2,7 +2,7 @@
 
 .c-input-heading {
   margin-bottom: 5px;
-  // @include tb {
-  //   font-size: 1.2em;
-  // }
+  @include tb {
+    font-size: 1.2em;
+  }
 }

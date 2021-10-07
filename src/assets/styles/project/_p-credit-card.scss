@@ -5,10 +5,16 @@
   &__contents {
     width: 90%;
     margin: 30px auto;
+    @include tb {
+      margin-top: 40px;
+    }
     &__list {
       margin-bottom: 40px;
       &__text {
         margin-bottom: 5px;
+        @include tb {
+          font-size: 1.2em;
+        }
       }
       & img {
         width: 100%;
