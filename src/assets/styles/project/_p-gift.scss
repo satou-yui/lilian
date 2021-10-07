@@ -5,6 +5,10 @@
   &__heading {
     font-size: 1.1em;
     margin-bottom: 15px;
+    @include tb {
+      font-size: 1.4em;
+      margin-bottom: 20px;
+    }
   }
   &__wrapper {
     display: flex;
@@ -19,6 +23,10 @@
         line-height: 1.7;
         font-size: .8em;
         margin-bottom: 7px;
+        @include tb {
+          font-size: 1em;
+          margin-bottom: 15px;
+        }
       }
       &__botton {
         width: 95%;
@@ -27,6 +35,9 @@
         background: $sub-color;
         color: #fff;
         box-shadow: #E0E0E0 3px 3px 4px;
+        @include tb {
+          font-size: .9em;
+        }
         &:hover {
           opacity: 0.8;
         }
