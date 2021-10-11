@@ -1,38 +1,90 @@
 @charset "UTF-8";
 
-/* TOP header 
-======================*/
 .p-header {
-  background: url(../images/top.png) no-repeat;
-  background-size: cover;
-  background-position: left 26% bottom 5%;
-  // background-position: left calc(100% - -630px) bottom calc(100% - 5%);
-  width: 100%;
-  height: 80vh;
-  @include tb {
-    background-position: left 18% bottom 5%;
-  }
-  &__logo {
-    text-align: center;
-    padding-top: 30px;
-    & img {
-      width: 70%;
-      max-width: 480px;
-      @include tb {
-        width: 400px;
+  display: none;
+}
+@include pc {
+  .p-header {
+    display: block;
+    background: $main-color;
+    font-family: $sub-font;
+    position: relative;
+    &-top {
+      width: calc(100% - 320px);
+      height: 18vh;
+      margin-left: auto;
+      margin-right: 0;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__catch {
+        width: 70%;
+        max-width: 650px;
+        margin: 0 auto;
+        &__text {
+          font-size: 1.8em;
+          color: $sub-color;
+          text-shadow: rgb(172, 172, 172) 3px 2px 6px;
+          text-align: left;
+          &-right {
+            text-align: right;
+          }
+        }
+      }
+      &__register {
+        width: 25%;
+        font-size: 1.3em;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin: 10px 0 0;
+        &__link {
+          display: block;
+          margin-right: 30px;
+          &__img {
+            margin: 0 auto;
+            display: block;
+            &--sign-up {
+              width: 40px;
+            }
+            &--login {
+              width: 27px;
+            }
+          }
+  
+        }
       }
     }
-  }
-  &__catch {
-    text-align: center;
-    padding: 30px 20px;
-    font-size: 2.4vh;
-    font-family: $sub-font;
-    color: #fff;
-    text-shadow: black 3px 2px 5px;
-    line-height: 1.7;
-    @include tb {
-      font-size: 2.7vh;
+    &-left{
+      position: absolute;
+      width: 280px;
+      background: url(../images/nav.png) repeat-y;
+      background-size: cover;
+      height: 100vh;
+      top: 0;
+      &__logo {
+        width: 100%;
+        margin: 30px 0;
+        & img {
+          display: block;
+          width: 90%;
+          margin: 0 auto;
+        }
+      }
+      &__instagram {
+        display: block;
+        font-size: 1.3em;
+        text-align: center;
+        background: rgba(255,255,255,0.4);
+        width: 80%;
+        margin: 0 auto;
+        padding: 7px 5px;
+        // border: 1px solid #bbbbbb;
+        & img {
+          width: 30px;
+        }
+      }
     }
-  }
+  }  
 }
