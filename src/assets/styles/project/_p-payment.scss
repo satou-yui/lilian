@@ -13,6 +13,9 @@
     @include tb {
       margin: 40px auto 60px;
     }
+    @include pc {
+      margin: 60px auto 150px !important;
+    }
     &__check {
       display: none;
     }

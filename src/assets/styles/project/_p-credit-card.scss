@@ -8,6 +8,9 @@
     @include tb {
       margin-top: 40px;
     }
+    @include pc {
+      margin-top: 60px !important;
+    }
     &__list {
       margin-bottom: 40px;
       &__text {
