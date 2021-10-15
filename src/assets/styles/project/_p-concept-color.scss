@@ -2,6 +2,9 @@
 
 .p-concept-color {
   margin-bottom: 70px;
+  @include pc {
+    margin-bottom: 150px !important;
+  }
   &__form {
     width: 90%;
     margin: 0 auto;

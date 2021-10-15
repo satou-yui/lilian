@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+.p-select-heading {
+  font-size: 1.1em;
+  text-align: center;
+  padding: 30px 0 15px;
+  @include tb {
+    font-size: 1.3em;
+  }
+  @include pc {
+    margin-bottom: 20px;
+  }
+}

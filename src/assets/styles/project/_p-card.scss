@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+.p-card {
+  display: flex;
+  justify-content: space-between;
+  &__item {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: .8em;
+    width: 47%;
+    @include tb {
+      font-size: 1.1em;
+    }
+    & img {
+      display: block;
+      width: 100%;
+      margin: 0 auto 5px;
+    }
+    &__radio {
+      box-sizing: border-box;
+      position: relative;
+      width: auto;
+      &::before {
+        background: #fff;
+        border: 1px solid #ccc;
+        // border-radius: 50%;
+        content: '';
+        display: block;
+        height: 16px;
+        right: -23px;
+        margin-top: -8px;
+        position: absolute;
+        bottom: 0;
+        width: 16px;
+      }
+      &::after {
+        border-right: 3px solid #ed7a9c;
+        border-bottom: 3px solid #ed7a9c;
+        content: '';
+        display: block;
+        height: 15px;
+        right: -21px;
+        margin-top: -7px;
+        opacity: 0;
+        position: absolute;
+        bottom: 2px;
+        transform: rotate(45deg);
+        width: 10px;
+      }
+    }
+  }
+}
+
+input[type=radio] {
+  display: none;
+}
+input[type=radio]:checked + .p-card__item__radio::after {
+  opacity: 1;
+}
