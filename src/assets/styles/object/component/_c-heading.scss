@@ -3,8 +3,13 @@
 .c-heading {
   font-size: 1.4em;
   text-align: center;
-  padding: 50px 0 30px;
+  padding: 50px 0 20px;
+  font-family: $sub-font;
   @include tb {
     font-size: 1.8em;
+  }
+  @include pc {
+    padding-top: 100px;
+    font-size: 1.7em;
   }
 }

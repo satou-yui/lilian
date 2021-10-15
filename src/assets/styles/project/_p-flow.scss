@@ -9,10 +9,17 @@
     @include tb {
       margin-bottom: 80px;
     }
+    @include pc {
+      width: 65%;
+    }
     &__contents {
       margin-bottom: 30px;
       @include tb {
         margin-bottom: 50px;
+      }
+      @include pc {
+        display: flex;
+        justify-content: space-evenly;
       }
       &__item {
         border: #707070 1px solid;
@@ -22,6 +29,12 @@
         align-items: center;
         padding: 20px 15px;
         margin-bottom: 15px;
+        @include pc {
+          display: flex;
+          flex-direction: column-reverse;
+          justify-content: space-between;
+          width: 25%;
+        }
         &__heading {
           text-align: center;
           color: $accent-color01;
@@ -31,6 +44,10 @@
           @include tb {
             font-size: 1.2em;
           }
+          @include pc {
+            font-size: 1em;
+            margin-bottom: 15px;
+          }
         }
         &__text {
           width: 50%;
@@ -39,6 +56,12 @@
           @include tb {
             font-size: 1.2em;
           }
+          @include pc {
+            margin-bottom: 10px;
+            width: 100%;
+            font-size: 1em;
+          }
+          
         }
         &__figure {
           text-align: center;
@@ -50,11 +73,21 @@
               @include tb {
                 width: 130px;
               }
+              @include pc {
+                width: 60%;
+                min-width: 90px;
+                margin: 0 auto;
+              }
             }
             &-maill {
               width: 70px;
               @include tb {
                 width: 90px;
+              }
+              @include pc {
+                width: 45%;
+                min-width: 80px;
+                margin: 0 auto;
               }
             }
             &-track {
@@ -62,11 +95,21 @@
               @include tb {
                 width: 130px;
               }
+              @include pc {
+                width: 50%;
+                min-width: 90px;
+                margin: 0 auto;
+              }
             }
             &-bouquet {
               width: 50px;
               @include tb {
                 width: 80px;
+              }
+              @include pc {
+                width: 35%;
+                min-width: 60px;
+                margin: 0 auto;
               }
             }
           }
@@ -74,7 +117,7 @@
       }
     }
     &__attention {
-      padding-top: 15px ;
+      padding-top: 15px;
     }
   }
 }

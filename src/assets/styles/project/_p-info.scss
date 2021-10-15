@@ -1,20 +1,30 @@
 @charset "UTF-8";
 
 .p-info {
-  margin-bottom: 50px;
+  margin-bottom: 70px;
   @include tb {
     margin-bottom: 80px;
   }
+  @include pc {
+    width: 45%;
+    margin-bottom: 150px;
+  }
   &__contents {
     width: 90%;
-    margin: 0 auto ;
+    margin: 0 auto;
     @include tb {
       width: 85%;
+    }
+    @include pc {
+      width: 100%;
     }
     &__item {
       position: relative;
       border-top: 1px solid #707070;
       padding: 15px 10px;
+      @include pc {
+        padding: 16px 10px;
+      }
       &::after {
         border-top: solid 1px $font-color;
         border-right: solid 1px $font-color;
@@ -31,13 +41,20 @@
         @include tb {
           font-size: 1.3em;
         }
+
         & time {
           display: block;
           color: $sub-color;
           margin-bottom: 3px;
-          
+          @include pc {
+            font-size: .8em;
+          }
         }
-        
+        &__heading {
+          @include pc {
+            font-size: .8em;
+          }
+        }
       }
     }
   }

@@ -7,4 +7,11 @@
   border-right: 30px solid transparent;
   border-top: 30px solid $accent-color02;
   margin: 0 auto 15px;
+  @include pc {
+    border-left: 30px solid $accent-color02;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    transform: translate(15px, -15px);
+    align-self: center;
+  }
 }

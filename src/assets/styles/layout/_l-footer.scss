@@ -3,46 +3,92 @@
 .l-footer {
   background: $sub-color;
   color: #fff;
+  overflow:hidden;
   &__menu {
-    margin-bottom: 30px;
+    margin: 20px 0 20px;
+    @include pc {
+      margin-top: 0;
+    }
+  }
+  &__botton {
+    margin-bottom: 23px;
+    &__link {
+      width: 80%;
+      background: #d5c0ae;
+      color: #fff;
+      padding: 10px;
+      font-size: 1.1em;
+      @include pc {
+        width: 100%;
+        transition: .3s;
+        border-radius: 0 !important;
+      }
+      &:hover {
+        background: #e6d8cb;
+      }
+    }
   }
   &__list {
-    text-align: center;
-    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include pc {
+      flex-wrap: nowrap;
+    }
   }
   &__item {
-    border-bottom: 1px solid #fff;
-    padding: 15px 0;
+    width: 45%;
+    font-size: .9em;
+    border: .5px dashed #fff;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:nth-child(even) {
+      border-right: .5px dashed #fff;
+    }
+    @include pc {
+      width: 13%;
+      border-top: none;
+      border-bottom: none;
+    }
   }
   &__link {
     display: block;
+    width: 100%;
+    text-align: center;
+    padding: 7px 3px;
+    @include pc { 
+      transition: .3s;
+      padding: 3px 3px;
+    }
+    &:hover {
+      color: #bbb;
+    }
   }
-  &__botton {
-    width: 80%;
-    background: #fff;
-    color: $sub-color;
-    padding: 10px;
-    font-size: 1.1em;
-  }
+  
   &__tel {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     &-number {
       display: block;
-      font-size: 1.9em;
+      font-size: 1.6em;
       letter-spacing: 1.5px;
       & img {
-        width: 30px;
-        padding-bottom: 7px;
+        width: 23px;
+        padding-bottom: 9px;
+        margin-right: 5px;
       }
+      
     }
     &-attention {
       font-size:.9em;
     }
   }
+  
   &__copy {
     text-align: center;
-    background: #fff;
+    background: #fff1e3;
     color: $font-color;
     font-size: 1.2em;
     line-height: 2;

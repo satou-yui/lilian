@@ -1,7 +1,15 @@
 @charset "UTF-8";
 
 .p-gift {
-  margin-bottom: 50px;
+  padding-bottom: 50px;
+  @include pc {
+    padding-bottom: 100px;
+  }
+  &-pin {
+    @include pc {
+      width: 55%;
+    }
+  }
   &__heading {
     font-size: 1.1em;
     margin-bottom: 15px;
@@ -9,11 +17,18 @@
       font-size: 1.4em;
       margin-bottom: 20px;
     }
+    @include pc {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+    }
   }
   &__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    @include pc {
+      margin-bottom: 20px;
+    }
     & img {
       width: 45%;
     }
@@ -27,16 +42,24 @@
           font-size: 1em;
           margin-bottom: 15px;
         }
+        @include pc {
+          font-size: 1.2em;
+          line-height: 2.3;
+        }
       }
       &__botton {
         width: 95%;
         font-size: .75em;
-        padding: 5px 10px;
+        padding: 7px 10px;
         background: $sub-color;
         color: #fff;
         box-shadow: #E0E0E0 3px 3px 4px;
         @include tb {
           font-size: .9em;
+        }
+        @include pc {
+          font-size: 1.2em;
+          width: 80%;
         }
         &:hover {
           opacity: 0.8;

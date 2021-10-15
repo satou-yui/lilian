@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+@include pc {
+  .p-nav {
+    width: 80%;
+    margin: 30px auto 20px;
+    &__list {
+      &__item {
+        font-size: 1.5em;
+        text-align: center;
+        padding: 15px 0;
+        color: #fff;
+        & a {
+          display: block;
+        }
+      }
+    }
+  }
+}

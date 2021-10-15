@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+.c-br-sp-tb {
+  @include pc {
+    display: none;
+  }
+}
+
+.c-br-pc {
+  display: none;
+  @include pc {
+    display: inline;
+  } 
+}

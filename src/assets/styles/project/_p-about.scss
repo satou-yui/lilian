@@ -2,11 +2,23 @@
 
 .p-about {
   width: 100%;
+  &__wrapper {
+    @include pc {
+      display: flex;
+      justify-content: center;
+      width: 74%;
+      margin: 0 auto;
+      
+    }
+  }
   &__contents {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
     @include tb {
       margin-bottom:  100px;
+    }
+    @include pc {
+      width: 90%;
     }
     &__head {
       color: $accent-color01;
@@ -16,6 +28,10 @@
       position: relative;
       @include tb {
         font-size: 1.5em;
+      }
+      @include pc {
+        font-size: 1.1em;
+        
       }
       &::before {
         position: absolute;
@@ -54,6 +70,10 @@
         width: 300px;
         height: 300px;
       }
+      @include pc {
+        width: 250px;
+        height: 250px;
+      }
       &--color01 {
         box-shadow: 10px 5px $accent-color03;
       }
@@ -62,11 +82,15 @@
       }
     }
     &__text {
-      font-family: $sub-font;
       padding: 20px 0;
       font-size: 1em;
       @include tb {
         font-size: 1.5em;
+      }
+      @include pc {
+        font-size: 1em;
+        letter-spacing: 1px;
+        padding: 25px 0 30px;
       }
     }
   }

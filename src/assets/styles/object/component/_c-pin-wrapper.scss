@@ -2,11 +2,18 @@
 
 .c-pin-wrapper {
   width: 92%;
-  margin: 0 auto 70px;
-  box-shadow: #E0E0E0 2px 2px 6px;
+  margin: 0 auto 50px;
+  box-shadow: #42424228 2px 2px 6px;
+  @include pc {
+    width: 60%;
+    margin-bottom: 80px;
+  }
   &__pin-inner {
     position: relative;
     padding: 5px;
+    @include pc {
+      padding: px 5px;
+    }
     &::before{
       content: "";
       display: block;
@@ -36,6 +43,9 @@
     text-align: center;
     @include tb {
       font-size: 1.2em;
+    }
+    @include pc {
+      font-size: 1em;
     }
   }
 }
