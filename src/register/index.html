@@ -19,6 +19,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <div id="app">
   <!--header
   ================================ -->
   <header class="l-header">
@@ -28,7 +30,30 @@
       </a>
     </h1>
     <!-- nav -->
-    <nav></nav>
+    <!-- hamburger_btn -->
+
+    <div class="c-hamburger-btn c-hamburger-btn--style u-hamburdger-display" v-on:click='ActiveBtn=!ActiveBtn'>
+      <span class="c-hamburger-btn--line c-hamburger-btn--line--top" 
+      v-bind:class="{'c-hamburger-btn--line--top-active':ActiveBtn}"></span>
+      <span class="c-hamburger-btn--line c-hamburger-btn--line--middle" 
+      v-bind:class="{'c-hamburger-btn--line--middle-active':ActiveBtn}"></span>
+      <span class="c-hamburger-btn--line c-hamburger-btn--line--bottom" 
+      v-bind:class="{'c-hamburger-btn--line--bottom-active':ActiveBtn}"></span>
+    </div>
+
+    <transition name="menu">
+      <nav class="c-hamburger-btn--menu" v-show="ActiveBtn">
+        <ul class="c-hamburger-btn--menu--list">
+            <li class="c-hamburger-btn--menu--list--item"><a href="#about">Lilianとは</a></li>
+            <li class="c-hamburger-btn--menu--list--item"><a href="#flow">お届けまでの流れ</a></li>
+            <li class="c-hamburger-btn--menu--list--item"><a href="#review">ご利用者様の声</a></li>
+            <li class="c-hamburger-btn--menu--list--item"><a href="#question">よくある質問</a></li>
+            <li class="c-hamburger-btn--menu--list--item"><a href="#info">お知らせ</a></li>
+            <li class="c-hamburger-btn--menu--list--item"><a href="register/index.html">お花の定期便の登録</a></li>
+        </ul>
+      </nav>
+    </transition>
+
   </header> <!-- header__end -->
 
 <main class="l-main u-fixed-top">
@@ -83,7 +108,7 @@
     <nav class="l-footer__menu">
       <!-- footer__botton -->
     <div class="l-footer__botton">
-      <a class="c-botton l-footer__botton__link" href="index.html">
+      <a class="c-botton l-footer__botton__link" href="../index.html">
         TOPページへ戻る
       </a>
     </div>
@@ -131,7 +156,7 @@
     <!-- footer__tel -->
     <div class="l-footer__tel">
       <a href="tel:0120-XXX-XXX" class="l-footer__tel-number">
-        <img src="assets/images/tel.png">0120-XXX-XXX
+        <img src="../assets/images/tel.png">0120-XXX-XXX
       </a>
       <p class="l-footer__tel-attention">
         ※受付時間：9：00〜18:00（日曜・祝日を除く）
@@ -143,5 +168,8 @@
       <small>©︎2021 Lilian</small>
     </p>
   </footer> <!-- footer__end -->
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="../assets/js/nav.js"></script>
 </body>
 </html>

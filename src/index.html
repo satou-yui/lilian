@@ -32,10 +32,10 @@
 </head>
 
 <body>
-
+  <div id="app"></div>
   <!--header
   ================================ -->
-  <header class="p-header">
+  <header id="header" class="p-header">
     <!-- header-top -->
     <div class="p-header-top">
       <!-- catch-copy -->
@@ -49,7 +49,7 @@
       </div> <!-- catch-copy__end -->
       <!-- register__link -->
       <div class="p-header-top__register">
-        <a class="p-header-top__register__link" href="#">
+        <a class="p-header-top__register__link" href="register/index.html">
           <img class="p-header-top__register__link__img p-header-top__register__link__img--sign-up" 
           src="assets/images/signup.png">
           新規登録
@@ -60,6 +60,29 @@
           ログイン
         </a>
       </div>
+      <!-- hamburger_btn -->
+      <div class="c-hamburger-btn" v-on:click='ActiveBtn=!ActiveBtn'>
+        <span class="c-hamburger-btn--line c-hamburger-btn--line--top" 
+        v-bind:class="{'c-hamburger-btn--line--top-active':ActiveBtn}"></span>
+        <span class="c-hamburger-btn--line c-hamburger-btn--line--middle" 
+        v-bind:class="{'c-hamburger-btn--line--middle-active':ActiveBtn}"></span>
+        <span class="c-hamburger-btn--line c-hamburger-btn--line--bottom" 
+        v-bind:class="{'c-hamburger-btn--line--bottom-active':ActiveBtn}"></span>
+      </div>
+
+      <transition name="menu">
+        <nav class="c-hamburger-btn--menu" v-show="ActiveBtn">
+          <ul class="c-hamburger-btn--menu--list">
+              <li class="c-hamburger-btn--menu--list--item"><a href="#about">Lilianとは</a></li>
+              <li class="c-hamburger-btn--menu--list--item"><a href="#flow">お届けまでの流れ</a></li>
+              <li class="c-hamburger-btn--menu--list--item"><a href="#review">ご利用者様の声</a></li>
+              <li class="c-hamburger-btn--menu--list--item"><a href="#question">よくある質問</a></li>
+              <li class="c-hamburger-btn--menu--list--item"><a href="#info">お知らせ</a></li>
+              <li class="c-hamburger-btn--menu--list--item"><a href="register/index.html">お花の定期便の登録</a></li>
+          </ul>
+        </nav>
+      </transition>
+
     </div> <!-- header-top__end -->
 
     <!-- header__left -->
@@ -71,19 +94,19 @@
       <nav class="p-nav">
         <ul class="p-nav__list">
           <li class="p-nav__list__item">
-            <a href="#">Lilianとは</a>
+            <a href="#about">Lilianとは</a>
           </li>
           <li class="p-nav__list__item">
-            <a href="#">お届けまでの流れ</a>
+            <a href="#flow">お届けまでの流れ</a>
           </li>
           <li class="p-nav__list__item">
-            <a href="#">ご利用者様の声</a>
+            <a href="#review">ご利用者様の声</a>
           </li>
           <li class="p-nav__list__item">
-            <a href="#">よくある質問</a>
+            <a href="#question">よくある質問</a>
           </li>
           <li class="p-nav__list__item">
-            <a href="#">お知らせ</a>
+            <a href="#info">お知らせ</a>
           </li>
         </ul>
       </nav> <!-- nav__end -->
@@ -117,7 +140,7 @@
             <p class="p-main-visual-pin__text-price">
               880円/別途送料＋220円
             </p>
-            <a class="c-botton c-register-botton c-arrow" href="#">お花の定期便を登録する</a>
+            <a class="c-botton c-register-botton c-arrow" href="register/index.html">お花の定期便を登録する</a>
           </div>
 
           <div class="c-pin-wrapper__pin-inner"></div>
@@ -127,49 +150,51 @@
 
     <!--about
     ================================ -->
-    <section class="p-about">
-      <!-- heading -->
-      <h2 class="c-heading">Lilianとは</h2>
-      <div class="c-pin-wrapper c-pin-wrapper-back-color01">
-        <div class="c-pin-wrapper__pin-inner"></div>
-        <p class="c-pin-wrapper__text-inner">
-          「かわいい」をコンセプトに作成したブーケを、<br class="c-br-sp-tb">
-          月２回お届けする「お花の定期便サービス」です。
-        </p>
-        <div class="c-pin-wrapper__pin-inner"></div>
-      </div> <!-- heading__end -->
-
-      <!-- about-contents -->
-      <div class="p-about__wrapper">
-        <div class="p-about__contents">
-          <div class="p-about__contents__head">
-            初回注文３０％オフ！
-          </div>
-          <img class="p-about__contents__img p-about__contents__img--color01" src="assets/images/about_01.jpeg">
-          <div class="p-about__contents__text">
-            グリーンを合わせて５〜７本のブーケ<br>
-            ８８０円/別途送料+２８０円
-          </div>
-          <a class="c-botton c-arrow c-register-botton" href="register/index.html">
-            お花の定期便を登録する
-          </a>
-        </div>
+    <fade-in-component>
+      <section id="about" class="p-about">
+        <!-- heading -->
+        <h2 class="c-heading">Lilianとは</h2>
+        <div class="c-pin-wrapper c-pin-wrapper-back-color01">
+          <div class="c-pin-wrapper__pin-inner"></div>
+          <p class="c-pin-wrapper__text-inner">
+            「かわいい」をコンセプトに作成したブーケを、<br class="c-br-sp-tb">
+            月２回お届けする「お花の定期便サービス」です。
+          </p>
+          <div class="c-pin-wrapper__pin-inner"></div>
+        </div> <!-- heading__end -->
   
-        <div class="p-about__contents">
-          <div class="p-about__contents__head">
-            初回注文1０％オフ！
+        <!-- about-contents -->
+        <div class="p-about__wrapper">
+          <div class="p-about__contents">
+            <div class="p-about__contents__head">
+              初回注文３０％オフ！
+            </div>
+            <img class="p-about__contents__img p-about__contents__img--color01" src="assets/images/about_01.jpeg">
+            <div class="p-about__contents__text">
+              グリーンを合わせて５〜７本のブーケ<br>
+              ８８０円/別途送料+２８０円
+            </div>
+            <a class="c-botton c-arrow c-register-botton" href="register/index.html">
+              お花の定期便を登録する
+            </a>
           </div>
-          <img class="p-about__contents__img p-about__contents__img--color02" src="assets/images/about_02.jpeg">
-          <div class="p-about__contents__text">
-            Lilianのお花を飾るのにちょうどいい<br>
-            サイズの花瓶を一緒に注文できます。
+    
+          <div class="p-about__contents">
+            <div class="p-about__contents__head">
+              初回注文1０％オフ！
+            </div>
+            <img class="p-about__contents__img p-about__contents__img--color02" src="assets/images/about_02.jpeg">
+            <div class="p-about__contents__text">
+              Lilianのお花を飾るのにちょうどいい<br>
+              サイズの花瓶を一緒に注文できます。
+            </div>
+            <a class="c-botton c-arrow c-register-botton" href="#">
+              花瓶の注文をする
+            </a>
           </div>
-          <a class="c-botton c-arrow c-register-botton" href="#">
-            花瓶の注文をする
-          </a>
-        </div>
-      </div> <!-- about-contents__end -->
-    </section> <!-- about__end -->
+        </div> <!-- about-contents__end -->
+      </section> <!-- about__end -->
+    </fade-in-component>
 
     <!--  feature contents -->
     <section class="p-feature">
@@ -228,7 +253,7 @@
 
     <!--flow
     ================================ -->
-    <section class="p-flow">
+    <section id="flow" class="p-flow">
       <h2 class="c-heading">お届けまでの流れ</h2>
       <div class="c-pin-wrapper c-pin-wrapper-back-color02">
         <div class="c-pin-wrapper__pin-inner"></div>
@@ -324,7 +349,7 @@
 
     <!--review
     ================================ -->
-    <section class="p-review">
+    <section id="review" class="p-review">
       <h2 class="c-heading p-review__heading">ご利用者様の声</h2>
       <div class="p-review__contents">
         <div class="p-review__contents__card">
@@ -386,11 +411,11 @@
 
     </section> <!-- review__end -->
 
-    <!--question
-    ================================ -->
-
     <div class="u-flex">
-      <section class="p-question">
+
+      <!--question
+      ================================ -->
+      <section id="question" class="p-question">
         <h2 class="c-heading">よくある質問</h2>
   
         <div class="p-question__contents">
@@ -430,7 +455,7 @@
   
       <!--info
       ================================ -->
-      <section class="p-info">
+      <section id="info" class="p-info">
         <h2 class="c-heading">お知らせ</h2>
         <div class="p-info__contents">
   
@@ -517,7 +542,7 @@
     <nav class="l-footer__menu">
       <!-- footer__botton -->
     <div class="l-footer__botton">
-      <a class="c-botton l-footer__botton__link" href="index.html">
+      <a class="c-botton l-footer__botton__link" href="#header">
         TOPページへ戻る
       </a>
     </div>
@@ -577,5 +602,8 @@
       <small>©︎2021 Lilian</small>
     </p>
   </footer> <!-- footer__end -->
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="assets/js/nav.js"></script>
 </body>
 </html>
