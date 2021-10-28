@@ -53,6 +53,13 @@ const imageMin = (done) => {
       done();
 }
 
+// jsコピー
+const copyjs = (done) => {
+  src('src/assets/js/*.js')
+    .pipe(dest("./dist/assets/js"));
+    done();
+}
+
 // ブラウザ更新
 const initBrowsersync = (done) => {
   browserSync.init({
@@ -86,6 +93,12 @@ const watchFiles = (done) =>{
   // htmlファイル変更時
   watch('./src/**/*.html')
     .on('change', series(htmlFormat, browserReload));
+  // jsファイル追加時
+  watch('./src/assets/js/**/*.js')
+    .on('add', series(copyjs, browserReload));
+  // jsファイル変更時
+  watch('./src/assets/js/**/*.js')
+    .on('change', series(copyjs, browserReload));
 
   // htmlファイル削除時
   watch([
@@ -107,7 +120,7 @@ const watchFiles = (done) =>{
 
 // デフォルトタスク
 exports.default = series(
-  parallel(compileSass, imageMin, htmlFormat),
+  parallel(compileSass, imageMin, htmlFormat, copyjs),
   series(initBrowsersync, watchFiles),
 );
 
