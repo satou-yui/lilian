@@ -2,14 +2,14 @@
 
 $main-font: 'Kosugi Maru', sans-serif;
 $sub-font: 'Kiwi Maru', serif;
-$font-color: #3B2410;
+$font-color: #55402e;
 $main-color: #fcf9f5;
 $sub-color: #8b6852;
 $accent-color01: #ff0000;
 $accent-color02: #ffd9df;
 $accent-color03: #e7eedb;
-$tb-max: 520px;
-$pc-max: 800px;
+$tb-max: 600px;
+$pc-max: 1025px;
 
 @mixin tb {
   @media screen and (min-width: $tb-max) {
