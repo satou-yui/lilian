@@ -1,8 +1,10 @@
 @charset "UTF-8";
 
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: $main-font;
-  $font-color: #3B2410;
+  color: $font-color;
 }
 
