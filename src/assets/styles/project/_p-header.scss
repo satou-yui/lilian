@@ -1,11 +1,20 @@
 @charset "UTF-8";
 
 .p-header {
-  display: none;
+  &-top {
+    &__catch {
+      display: none;
+    }
+    &__register {
+      display: none;
+    }
+  }
+  &-left {
+    display: none;
+  }
 }
 @include pc {
   .p-header {
-    display: block;
     background: $main-color;
     font-family: $sub-font;
     position: relative;
@@ -19,6 +28,7 @@
       justify-content: space-between;
       align-items: center;
       &__catch {
+        display: block;
         width: 70%;
         max-width: 650px;
         margin: 0 auto;
@@ -57,6 +67,7 @@
       }
     }
     &-left{
+      display: block;
       position: absolute;
       width: 280px;
       background: url(../images/nav.png) repeat-y;
