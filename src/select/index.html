@@ -17,458 +17,461 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  
+
 </head>
 <body>
   <div id="app">
-  <!--header
-  ================================ -->
-  <header class="l-header">
-    <h1 class="l-header__logo">
-      <a class="l-header__link" href="../index.html">
-        <img src="../assets/images/logo-font.png">
-      </a>
-    </h1>
-    <!-- hamburger_btn -->
-      <div class="c-hamburger-btn c-hamburger-btn--style u-hamburdger-display" v-on:click='ActiveBtn=!ActiveBtn'>
-        <span class="c-hamburger-btn--line c-hamburger-btn--line--top" 
-        v-bind:class="{'c-hamburger-btn--line--top-active':ActiveBtn}"></span>
-        <span class="c-hamburger-btn--line c-hamburger-btn--line--middle" 
-        v-bind:class="{'c-hamburger-btn--line--middle-active':ActiveBtn}"></span>
-        <span class="c-hamburger-btn--line c-hamburger-btn--line--bottom" 
-        v-bind:class="{'c-hamburger-btn--line--bottom-active':ActiveBtn}"></span>
-      </div>
-
-    <transition name="menu">
-      <nav class="c-hamburger-btn--menu" v-show="ActiveBtn">
-        <ul class="c-hamburger-btn--menu--list">
-            <li class="c-hamburger-btn--menu--list--item"><a href="#about">Lilianとは</a></li>
-            <li class="c-hamburger-btn--menu--list--item"><a href="#flow">お届けまでの流れ</a></li>
-            <li class="c-hamburger-btn--menu--list--item"><a href="#review">ご利用者様の声</a></li>
-            <li class="c-hamburger-btn--menu--list--item"><a href="#question">よくある質問</a></li>
-            <li class="c-hamburger-btn--menu--list--item"><a href="#info">お知らせ</a></li>
-            <li class="c-hamburger-btn--menu--list--item"><a href="register/index.html">お花の定期便の登録</a></li>
-        </ul>
-      </nav>
-    </transition>
-
-  </header> <!-- header__end -->
-
-  <main class="l-main u-fixed-top">
-
-    <!--flower flow
+    <!--header
     ================================ -->
-    <figure class="c-flower-flow c-flower-flow-margin u-width">
-      <img src="../assets/images/register02.png">
-    </figure>
-
-    <!--flower select
-    ================================ -->
-    <section class="p-select">
-      <!-- select heading -->
-      <div class="c-pin-wrapper c-pin-wrapper-back-color02 c-select-pin-wrapper">
-        <div class="c-pin-wrapper__pin-inner"></div>
-        <div class="c-pin-wrapper__text-inner c-pin-inner-heading-padding">
-          <h2 class="c-pin-inner-heading">お花の定期便の登録</h2>
+    <header class="l-header">
+      <h1 class="l-header__logo">
+        <a class="l-header__link" href="../index.html">
+          <img src="../assets/images/logo-font.png">
+        </a>
+      </h1>
+      <!-- hamburger_btn -->
+        <div class="c-hamburger-btn c-hamburger-btn--style u-hamburdger-display" v-on:click='ActiveBtn=!ActiveBtn'>
+          <span class="c-hamburger-btn--line c-hamburger-btn--line--top" 
+          v-bind:class="{'c-hamburger-btn--line--top-active':ActiveBtn}"></span>
+          <span class="c-hamburger-btn--line c-hamburger-btn--line--middle" 
+          v-bind:class="{'c-hamburger-btn--line--middle-active':ActiveBtn}"></span>
+          <span class="c-hamburger-btn--line c-hamburger-btn--line--bottom" 
+          v-bind:class="{'c-hamburger-btn--line--bottom-active':ActiveBtn}"></span>
         </div>
-        <div class="c-pin-wrapper__pin-inner"></div>
-      </div>
 
-      <div class="u-width">
+      <transition name="menu">
+        <nav class="c-hamburger-btn--menu" v-show="ActiveBtn">
+          <ul class="c-hamburger-btn--menu--list">
+            <li class="c-hamburger-btn--menu--list--item"><a href="../index.html">TOPページ</a></li>
+            <li class="c-hamburger-btn--menu--list--item"><a href="../index.html#about">Lilianとは</a></li>
+            <li class="c-hamburger-btn--menu--list--item"><a href="../index.html#flow">お届けまでの流れ</a></li>
+            <li class="c-hamburger-btn--menu--list--item"><a href="../index.html#review">ご利用者様の声</a></li>
+            <li class="c-hamburger-btn--menu--list--item"><a href="../index.html#question">よくある質問</a></li>
+            <li class="c-hamburger-btn--menu--list--item"><a href="../index.html#info">お知らせ</a></li>
+          </ul>
+        </nav>
+      </transition>
+
+    </header> <!-- header__end -->
+
+    <main class="l-main u-fixed-top">
+
+      <!--flower flow
+      ================================ -->
+      <figure class="c-flower-flow c-flower-flow-margin u-width">
+        <img src="../assets/images/register02.png">
+      </figure>
+
+      <!--flower select
+      ================================ -->
+      <section class="p-select">
+        <!-- select heading -->
+        <div class="c-pin-wrapper c-pin-wrapper-back-color02 c-select-pin-wrapper">
+          <div class="c-pin-wrapper__pin-inner"></div>
+          <div class="c-pin-wrapper__text-inner c-pin-inner-heading-padding">
+            <h2 class="c-pin-inner-heading">お花の定期便の登録</h2>
+          </div>
+          <div class="c-pin-wrapper__pin-inner"></div>
+        </div>
+
+        <div class="u-width">
+          <h2 class="p-select-heading">
+            生花orドライフラワーの選択
+            <span class="c-label c-label--color01">必須</span>
+          </h2>
+
+          
+          <div class="p-select__wrapper">
+            <div class="p-card">
+              <div class="p-card__item">
+                <input type="radio" name="flower_select" value="flower" id="flower" v-model="select">
+                <label class="p-card__item__radio" for="flower">
+                  <img src="../assets/images/flower.jpeg">
+                  生花
+                </label>
+              </div>
+      
+              <div class="p-card__item">
+                <input type="radio" name="flower_select" value="dried-flower" id="dried_flower" v-model="select">
+                <label class="p-card__item__radio" for="dried_flower">
+                  <img src="../assets/images/dried_flower.jpeg">
+                  ドライフラワー
+                </label>
+              </div>
+            </div>
+            <form action="program.php" method="post">
+              <div class="p-select__form">
+                <select name="flower-select" required class="p-select-form" v-model="select">
+                  <option value="flower" selected>生花</option>
+                  <option value="dried-flower">ドライフラワー</option>
+                </select>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section> <!-- select_end -->
+      <!--kind select
+      ================================ -->
+      <section class="p-kind u-width">
         <h2 class="p-select-heading">
-          生花orドライフラワーの選択
+          お好きなお花の種類の選択
           <span class="c-label c-label--color01">必須</span>
         </h2>
 
-        <div class="p-select__wrapper">
+        <!-- seasonal -->
+        <div class="p-kind__wrapper">
+          <h3 class="p-kind__wrapper__heading">
+            季節限定
+            <span>９</span>月
+          </h3>
+
           <div class="p-card">
             <div class="p-card__item">
-              <input type="radio" name="flower_select" value="flower" id="flower">
-              <label class="p-card__item__radio" for="flower">
-                <img src="../assets/images/flower.jpeg">
-                生花
+              <input type="radio" name="flower_kind" value="gerbera" id="gerbera" v-model="flower">
+              <label class="p-card__item__radio" for="gerbera"><img src="../assets/images/gerbera.jpeg">
+                ガーベラ
               </label>
             </div>
-    
+
             <div class="p-card__item">
-              <input type="radio" name="flower_select" value="dried_flower" id="dried_flower">
-              <label class="p-card__item__radio" for="dried_flower">
-                <img src="../assets/images/dried_flower.jpeg">
-                ドライフラワー
+              <input type="radio" name="flower_kind" value="mokara" id="mokara" v-model="flower">
+              <label class="p-card__item__radio" for="mokara"><img src="../assets/images/mokara.jpeg">
+                モカラ
               </label>
             </div>
           </div>
 
-          <form action="program.php" method="post">
-            <div class="p-select__form">
-              <select name="flower-select" required class="p-select-form">
-                <option value="flower" selected>生花</option>
-                <option value="dried flower">ドライフラワー</option>
+          <div class="p-card">
+            <div class="p-card__item">
+              <input type="radio" name="flower_kind" value="cosmos" id="cosmos" v-model="flower">
+              <label class="p-card__item__radio" for="cosmos"><img src="../assets/images/cosmos.jpeg">
+                コスモス
+              </label>
+            </div>
+
+            <div class="p-card__item">
+              <input type="radio" name="flower_kind" value="eustoma" id="eustoma" v-model="flower">
+              <label class="p-card__item__radio" for="eustoma"><img src="../assets/images/eustoma.jpeg">
+                トルコキキョウ
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- regular -->
+        <div class="p-kind__wrapper">
+          <h3 class="p-kind__wrapper__heading">
+            レギュラー
+          </h3>
+          <div class="p-card">
+            <div class="p-card__item">
+              <input type="radio" name="flower_kind" value="spraymum" id="spraymum" v-model="flower">
+              <label class="p-card__item__radio" for="spraymum"><img src="../assets/images/spray_mum.jpeg">
+                スプレーマム
+              </label>
+            </div>
+
+            <div class="p-card__item">
+              <input type="radio" name="flower_kind" value="gypsophila" id="gypsophila" v-model="flower">
+              <label class="p-card__item__radio" for="gypsophila"><img src="../assets/images/gypsophila.jpeg">
+                かすみ草
+              </label>
+            </div>
+          </div>
+
+          <div class="p-card">
+            <div class="p-card__item">
+              <input type="radio" name="flower_kind" value="tulips" id="tulips" v-model="flower">
+              <label class="p-card__item__radio" for="tulips"><img src="../assets/images/tulip.png">
+                チューリップ
+              </label>
+            </div>
+
+            <div class="p-card__item">
+              <input type="radio" name="flower_kind" value="rose" id="rose" v-model="flower">
+              <label class="p-card__item__radio" for="rose"><img src="../assets/images/rose.jpeg">
+                バラ
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <form action="program.php" method="post">
+          <div class="p-kind__form">
+            <select name="flower-kind" required class="p-select-form" v-model="flower">
+              <option value="gerbera">ガーベラ</option>
+              <option value="mokara">モカラ</option>
+              <option value="cosmos">コスモス</option>
+              <option value="eustoma">トルコキキョウ</option>
+              <option value="spraymum">スプレーマム</option>
+              <option value="gypsophila">かすみ草</option>
+              <option value="tulips">チューリップ</option>
+              <option value="rose">バラ</option>
+            </select>
+          </div>
+        </form>
+
+
+        <!-- page-nav -->
+        <ul class="p-page-nav">
+          <li class="p-page-nav__item p-page-nav__item-active">
+            <span>1</span>
+          </li>
+          <li class="p-page-nav__item">
+            <span>2</span>
+          </li>
+          <li class="p-page-nav__item">
+            <span>3</span>
+          </li>
+          <span class="p-page-nav__extend">...</span>
+          <li class="p-page-nav__item">
+            <span>NEXT</span>
+          </li>
+        </ul>
+      </section> <!-- kind_select__end -->
+
+      <!--concept color
+      ================================ -->
+      <section class="p-concept-color u-width">
+        <h2 class="p-select-heading">
+          ブーケのコンセプトカラー
+          <span class="c-label c-label--color01">必須</span>
+        </h2>
+
+        <form action="program.php" method="post">
+          <div class="p-concept-color__form">
+            <select name="concept-color" required class="p-select-form">
+              <optgroup label="ビビットカラー">
+                <option value="pink-vivid">ピンク系</option>
+                <option value="blue-vivid">青系</option>
+                <option value="yellow-vivid">黄色系</option>
+                <option value="orange-vivid">オレンジ系</option>
+                <option value="purple-vivid">紫系</option>
+                <option value="red-vivid">赤系</option>
+              </optgroup>
+
+              <optgroup label="くすみカラー">
+                <option value="pink-dull">ピンク系</option>
+                <option value="blue-dull">青系</option>
+                <option value="yellow-dull">黄色系</option>
+                <option value="orange-dull">オレンジ系</option>
+                <option value="purple-dull">紫系</option>
+                <option value="red-dull">赤系</option>
+              </optgroup>
+            </select>
+          </div>
+        </form>
+
+      </section> <!-- concept_color__end -->
+
+      <!--addressee color
+      ================================ -->
+      <section class="p-addressee">
+        <div class="c-pin-wrapper c-pin-wrapper-back-color02 c-select-pin-wrapper">
+          <div class="c-pin-wrapper__pin-inner"></div>
+          <div class="c-pin-wrapper__text-inner c-pin-inner-heading-padding">
+            <h2 class="c-pin-inner-heading">お届け先の入力</h2>
+          </div>
+          <div class="c-pin-wrapper__pin-inner"></div>
+        </div>
+
+        <form class="u-width" action="program.php" method="post">
+          <div class="p-addressee__form">
+            <div class="p-addressee__form__select">
+              <label class="p-addressee__form__select__heading">
+                <input type="radio" name="gift" value="gift">
+                ギフトとして利用する
+              </label>
+              <p class="p-addressee__form__select__gift-attention">
+                ※ご本人以外にお届けする場合、必ずチェックしてください。
+              </p>
+            </div>
+
+            <div class="p-addressee__form__select">
+              <p class="c-input-heading">
+                お届け曜日の選択
+              </p>
+              <select name="day" required class="p-select-form">
+                <option value="monday">月曜日</option>
+                <option value="tuesday">火曜日</option>
+                <option value="wednesday">水曜日</option>
+                <option value="thursday">木曜日</option>
+                <option value="friday">金曜日</option>
+                <option value="saturday">土曜日</option>
+                <option value="sunday">日曜日</option>
               </select>
             </div>
-          </form>
-        </div>
-      </div>
-    </section> <!-- select_end -->
 
-    <!--kind select
+            <div class="p-addressee__form__select">
+              <p class="c-input-heading">宛名
+              </p>
+              <input class="c-input" type="text" name="name" placeholder="例）花園　りりあん" required>
+            </div>
+
+            <div class="p-addressee__form__select">
+              <p class="c-input-heading">郵便番号
+              </p>
+              <input class="c-input" type="text" name="postalcod" placeholder="例）222-3981" required>
+            </div>
+
+            <div class="p-addressee__form__select">
+              <p class="c-input-heading">
+                都道府県
+              </p>
+              <select name="pref_name" required class="p-select-form">
+                <option value="北海道" selected>北海道</option>
+                <option value="青森県">青森県</option>
+                <option value="岩手県">岩手県</option>
+                <option value="宮城県">宮城県</option>
+                <option value="秋田県">秋田県</option>
+                <option value="山形県">山形県</option>
+                <option value="福島県">福島県</option>
+                <option value="茨城県">茨城県</option>
+                <option value="栃木県">栃木県</option>
+                <option value="群馬県">群馬県</option>
+                <option value="埼玉県">埼玉県</option>
+                <option value="千葉県">千葉県</option>
+                <option value="東京都">東京都</option>
+                <option value="神奈川県">神奈川県</option>
+                <option value="新潟県">新潟県</option>
+                <option value="富山県">富山県</option>
+                <option value="石川県">石川県</option>
+                <option value="福井県">福井県</option>
+                <option value="山梨県">山梨県</option>
+                <option value="長野県">長野県</option>
+                <option value="岐阜県">岐阜県</option>
+                <option value="静岡県">静岡県</option>
+                <option value="愛知県">愛知県</option>
+                <option value="三重県">三重県</option>
+                <option value="滋賀県">滋賀県</option>
+                <option value="京都府">京都府</option>
+                <option value="大阪府">大阪府</option>
+                <option value="兵庫県">兵庫県</option>
+                <option value="奈良県">奈良県</option>
+                <option value="和歌山県">和歌山県</option>
+                <option value="鳥取県">鳥取県</option>
+                <option value="島根県">島根県</option>
+                <option value="岡山県">岡山県</option>
+                <option value="広島県">広島県</option>
+                <option value="山口県">山口県</option>
+                <option value="徳島県">徳島県</option>
+                <option value="香川県">香川県</option>
+                <option value="愛媛県">愛媛県</option>
+                <option value="高知県">高知県</option>
+                <option value="福岡県">福岡県</option>
+                <option value="佐賀県">佐賀県</option>
+                <option value="長崎県">長崎県</option>
+                <option value="熊本県">熊本県</option>
+                <option value="大分県">大分県</option>
+                <option value="宮崎県">宮崎県</option>
+                <option value="鹿児島県">鹿児島県</option>
+                <option value="沖縄県">沖縄県</option>
+              </select>
+            </div>
+
+            <div class="p-addressee__form__select">
+              <p class="c-input-heading">市区町村
+              </p>
+              <input class="c-input" type="text" name="address_city" placeholder="例）札幌市" required>
+            </div>
+
+            <div class="p-addressee__form__select">
+              <p class="c-input-heading">それ以降（番地まで）
+              </p>
+              <input class="c-input" type="text" name="address_01" placeholder="例）北区北６条西" required>
+            </div>
+
+            <div class="p-addressee__form__select">
+              <p class="c-input-heading">建物名・お部屋番号
+              </p>
+              <input class="c-input" type="text" name="address_02" placeholder="例）Lilian　１０５号" required>
+            </div>
+
+            <div class="p-addressee__form__select">
+              <p class="c-input-heading">電話番号
+              </p>
+              <input class="c-input" type="tell" name="tell" placeholder="例）012-3350-7777" required>
+            </div>
+
+            <input class="c-botton c-register-botton" type="submit" name="submit" value="[次へ]情報の入力をする" onclick="location.href='../payment/index.html'">
+
+          </div>
+        </form>
+      </section> <!-- addressee__end -->
+    </main>
+
+    <!--footer
     ================================ -->
-    <section class="p-kind u-width">
-      <h2 class="p-select-heading">
-        お好きなお花の種類の選択
-        <span class="c-label c-label--color01">必須</span>
-      </h2>
-
-      <!-- seasonal -->
-      <div class="p-kind__wrapper">
-        <h3 class="p-kind__wrapper__heading">
-          季節限定
-          <span>９</span>月
-        </h3>
-
-        <div class="p-card">
-          <div class="p-card__item">
-            <input type="radio" name="flower_kind" value="gerbera" id="gerbera">
-            <label class="p-card__item__radio" for="gerbera"><img src="../assets/images/gerbera.jpeg">
-              ガーベラ
-            </label>
-          </div>
-
-          <div class="p-card__item">
-            <input type="radio" name="flower_kind" value="mokara" id="mokara">
-            <label class="p-card__item__radio" for="mokara"><img src="../assets/images/mokara.jpeg">
-              モカラ
-            </label>
-          </div>
-        </div>
-
-        <div class="p-card">
-          <div class="p-card__item">
-            <input type="radio" name="flower_kind" value="cosmos" id="cosmos">
-            <label class="p-card__item__radio" for="cosmos"><img src="../assets/images/cosmos.jpeg">
-              コスモス
-            </label>
-          </div>
-
-          <div class="p-card__item">
-            <input type="radio" name="flower_kind" value="eustoma" id="eustoma">
-            <label class="p-card__item__radio" for="eustoma"><img src="../assets/images/eustoma.jpeg">
-              トルコキキョウ
-            </label>
-          </div>
-        </div>
+    <footer class="l-footer">
+      
+      <nav class="l-footer__menu">
+        <!-- footer__botton -->
+      <div class="l-footer__botton u-border">
+        <a class="c-botton l-footer__botton__link" href="../index.html">
+          TOPページへ戻る
+        </a>
       </div>
+        <!-- footer__nav -->
+        <ul class="l-footer__list">
+          <li class="l-footer__item">
+            <a class="l-footer__link" href="#">
+              よくある質問
+            </a>
+          </li>
 
-      <!-- regular -->
-      <div class="p-kind__wrapper">
-        <h3 class="p-kind__wrapper__heading">
-          レギュラー
-        </h3>
-        <div class="p-card">
-          <div class="p-card__item">
-            <input type="radio" name="flower_kind" value="spraymum" id="spraymum">
-            <label class="p-card__item__radio" for="spraymum"><img src="../assets/images/spray_mum.jpeg">
-              スプレーマム
-            </label>
-          </div>
+          <li class="l-footer__item">
+            <a class="l-footer__link" href="#">
+              お問い合わせ
+            </a>
+          </li>
 
-          <div class="p-card__item">
-            <input type="radio" name="flower_kind" value="gypsophila" id="gypsophila">
-            <label class="p-card__item__radio" for="gypsophila"><img src="../assets/images/gypsophila.jpeg">
-              かすみ草
-            </label>
-          </div>
-        </div>
+          <li class="l-footer__item">
+            <a class="l-footer__link" href="#">
+              利用規約
+            </a>
+          </li>
 
-        <div class="p-card">
-          <div class="p-card__item">
-            <input type="radio" name="flower_kind" value="tulips" id="tulips">
-            <label class="p-card__item__radio" for="tulips"><img src="../assets/images/tulip.png">
-              チューリップ
-            </label>
-          </div>
+          <li class="l-footer__item">
+            <a class="l-footer__link" href="#">
+              プライバシーポリシー
+            </a>
+          </li>
 
-          <div class="p-card__item">
-            <input type="radio" name="flower_kind" value="rose" id="rose">
-            <label class="p-card__item__radio" for="rose"><img src="../assets/images/rose.jpeg">
-              バラ
-            </label>
-          </div>
-        </div>
-      </div>
+          <li class="l-footer__item">
+            <a class="l-footer__link" href="#">
+              運営会社
+            </a>
+          </li>
 
-      <form action="program.php" method="post">
-        <div class="p-kind__form">
-          <select name="flower-kind" required class="p-select-form">
-            <option value="gerbera">ガーベラ</option>
-            <option value="mokara">モカラ</option>
-            <option value="cosmos">コスモス</option>
-            <option value="eustoma">トルコキキョウ</option>
-            <option value="spraymum">スプレーマム</option>
-            <option value="gypsophila">かすみ草</option>
-            <option value="tulips">チューリップ</option>
-            <option value="rose">バラ</option>
-          </select>
-        </div>
-      </form>
+          <li class="l-footer__item">
+            <a class="l-footer__link" href="#">
+              特定商取引に基づく表記
+            </a>
+          </li>
 
-
-      <!-- page-nav -->
-      <ul class="p-page-nav">
-        <li class="p-page-nav__item p-page-nav__item-active">
-          <span>1</span>
-        </li>
-        <li class="p-page-nav__item">
-          <span>2</span>
-        </li>
-        <li class="p-page-nav__item">
-          <span>3</span>
-        </li>
-        <span class="p-page-nav__extend">...</span>
-        <li class="p-page-nav__item">
-          <span>NEXT</span>
-        </li>
-      </ul>
-    </section> <!-- kind_select__end -->
-
-    <!--concept color
-    ================================ -->
-    <section class="p-concept-color u-width">
-      <h2 class="p-select-heading">
-        ブーケのコンセプトカラー
-        <span class="c-label c-label--color01">必須</span>
-      </h2>
-
-      <form action="program.php" method="post">
-        <div class="p-concept-color__form">
-          <select name="concept-color" required class="p-select-form">
-            <optgroup label="ビビットカラー">
-              <option value="pink-vivid">ピンク系</option>
-              <option value="blue-vivid">青系</option>
-              <option value="yellow-vivid">黄色系</option>
-              <option value="orange-vivid">オレンジ系</option>
-              <option value="purple-vivid">紫系</option>
-              <option value="red-vivid">赤系</option>
-            </optgroup>
-
-            <optgroup label="くすみカラー">
-              <option value="pink-dull">ピンク系</option>
-              <option value="blue-dull">青系</option>
-              <option value="yellow-dull">黄色系</option>
-              <option value="orange-dull">オレンジ系</option>
-              <option value="purple-dull">紫系</option>
-              <option value="red-dull">赤系</option>
-            </optgroup>
-          </select>
-        </div>
-      </form>
-
-    </section> <!-- concept_color__end -->
-
-    <!--addressee color
-    ================================ -->
-    <section class="p-addressee">
-      <div class="c-pin-wrapper c-pin-wrapper-back-color02 c-select-pin-wrapper">
-        <div class="c-pin-wrapper__pin-inner"></div>
-        <div class="c-pin-wrapper__text-inner c-pin-inner-heading-padding">
-          <h2 class="c-pin-inner-heading">お届け先の入力</h2>
-        </div>
-        <div class="c-pin-wrapper__pin-inner"></div>
-      </div>
-
-      <form class="u-width" action="program.php" method="post">
-        <div class="p-addressee__form">
-          <div class="p-addressee__form__select">
-            <label class="p-addressee__form__select__heading">
-              <input type="radio" name="gift" value="gift">
-              ギフトとして利用する
-            </label>
-            <p class="p-addressee__form__select__gift-attention">
-              ※ご本人以外にお届けする場合、必ずチェックしてください。
-            </p>
-          </div>
-
-          <div class="p-addressee__form__select">
-            <p class="c-input-heading">
-              お届け曜日の選択
-            </p>
-            <select name="day" required class="p-select-form">
-              <option value="monday">月曜日</option>
-              <option value="tuesday">火曜日</option>
-              <option value="wednesday">水曜日</option>
-              <option value="thursday">木曜日</option>
-              <option value="friday">金曜日</option>
-              <option value="saturday">土曜日</option>
-              <option value="sunday">日曜日</option>
-            </select>
-          </div>
-
-          <div class="p-addressee__form__select">
-            <p class="c-input-heading">宛名
-            </p>
-            <input class="c-input" type="text" name="name" placeholder="例）花園　りりあん" required>
-          </div>
-
-          <div class="p-addressee__form__select">
-            <p class="c-input-heading">郵便番号
-            </p>
-            <input class="c-input" type="text" name="postalcod" placeholder="例）222-3981" required>
-          </div>
-
-          <div class="p-addressee__form__select">
-            <p class="c-input-heading">
-              都道府県
-            </p>
-            <select name="pref_name" required class="p-select-form">
-              <option value="北海道" selected>北海道</option>
-              <option value="青森県">青森県</option>
-              <option value="岩手県">岩手県</option>
-              <option value="宮城県">宮城県</option>
-              <option value="秋田県">秋田県</option>
-              <option value="山形県">山形県</option>
-              <option value="福島県">福島県</option>
-              <option value="茨城県">茨城県</option>
-              <option value="栃木県">栃木県</option>
-              <option value="群馬県">群馬県</option>
-              <option value="埼玉県">埼玉県</option>
-              <option value="千葉県">千葉県</option>
-              <option value="東京都">東京都</option>
-              <option value="神奈川県">神奈川県</option>
-              <option value="新潟県">新潟県</option>
-              <option value="富山県">富山県</option>
-              <option value="石川県">石川県</option>
-              <option value="福井県">福井県</option>
-              <option value="山梨県">山梨県</option>
-              <option value="長野県">長野県</option>
-              <option value="岐阜県">岐阜県</option>
-              <option value="静岡県">静岡県</option>
-              <option value="愛知県">愛知県</option>
-              <option value="三重県">三重県</option>
-              <option value="滋賀県">滋賀県</option>
-              <option value="京都府">京都府</option>
-              <option value="大阪府">大阪府</option>
-              <option value="兵庫県">兵庫県</option>
-              <option value="奈良県">奈良県</option>
-              <option value="和歌山県">和歌山県</option>
-              <option value="鳥取県">鳥取県</option>
-              <option value="島根県">島根県</option>
-              <option value="岡山県">岡山県</option>
-              <option value="広島県">広島県</option>
-              <option value="山口県">山口県</option>
-              <option value="徳島県">徳島県</option>
-              <option value="香川県">香川県</option>
-              <option value="愛媛県">愛媛県</option>
-              <option value="高知県">高知県</option>
-              <option value="福岡県">福岡県</option>
-              <option value="佐賀県">佐賀県</option>
-              <option value="長崎県">長崎県</option>
-              <option value="熊本県">熊本県</option>
-              <option value="大分県">大分県</option>
-              <option value="宮崎県">宮崎県</option>
-              <option value="鹿児島県">鹿児島県</option>
-              <option value="沖縄県">沖縄県</option>
-            </select>
-          </div>
-
-          <div class="p-addressee__form__select">
-            <p class="c-input-heading">市区町村
-            </p>
-            <input class="c-input" type="text" name="address_city" placeholder="例）札幌市" required>
-          </div>
-
-          <div class="p-addressee__form__select">
-            <p class="c-input-heading">それ以降（番地まで）
-            </p>
-            <input class="c-input" type="text" name="address_01" placeholder="例）北区北６条西" required>
-          </div>
-
-          <div class="p-addressee__form__select">
-            <p class="c-input-heading">建物名・お部屋番号
-            </p>
-            <input class="c-input" type="text" name="address_02" placeholder="例）Lilian　１０５号" required>
-          </div>
-
-          <div class="p-addressee__form__select">
-            <p class="c-input-heading">電話番号
-            </p>
-            <input class="c-input" type="tell" name="tell" placeholder="例）012-3350-7777" required>
-          </div>
-
-          <input class="c-botton c-register-botton" type="submit" name="submit" value="[次へ]情報の入力をする" onclick="location.href='../payment/index.html'">
-
-        </div>
-      </form>
-    </section> <!-- addressee__end -->
-  </main>
-
-  <!--footer
-  ================================ -->
-  <footer class="l-footer">
-    
-    <nav class="l-footer__menu">
-      <!-- footer__botton -->
-    <div class="l-footer__botton u-border">
-      <a class="c-botton l-footer__botton__link" href="../index.html">
-        TOPページへ戻る
-      </a>
-    </div>
-      <!-- footer__nav -->
-      <ul class="l-footer__list">
-        <li class="l-footer__item">
-          <a class="l-footer__link" href="#">
-            よくある質問
-          </a>
-        </li>
-
-        <li class="l-footer__item">
-          <a class="l-footer__link" href="#">
-            お問い合わせ
-          </a>
-        </li>
-
-        <li class="l-footer__item">
-          <a class="l-footer__link" href="#">
-            利用規約
-          </a>
-        </li>
-
-        <li class="l-footer__item">
-          <a class="l-footer__link" href="#">
-            プライバシーポリシー
-          </a>
-        </li>
-
-        <li class="l-footer__item">
-          <a class="l-footer__link" href="#">
-            運営会社
-          </a>
-        </li>
-
-        <li class="l-footer__item">
-          <a class="l-footer__link" href="#">
-            特定商取引に基づく表記
-          </a>
-        </li>
-
-      </ul>
-    </nav> <!-- footer__nav__end -->
-    
-    <!-- footer__tel -->
-    <div class="l-footer__tel">
-      <a href="tel:0120-XXX-XXX" class="l-footer__tel-number">
-        <img src="../assets/images/tel.png">0120-XXX-XXX
-      </a>
-      <p class="l-footer__tel-attention">
-        ※受付時間：9：00〜18:00（日曜・祝日を除く）
+        </ul>
+      </nav> <!-- footer__nav__end -->
+      
+      <!-- footer__tel -->
+      <div class="l-footer__tel">
+        <a href="tel:0120-XXX-XXX" class="l-footer__tel-number">
+          <img src="../assets/images/tel.png">0120-XXX-XXX
+        </a>
+        <p class="l-footer__tel-attention">
+          ※受付時間：9：00〜18:00（日曜・祝日を除く）
+        </p>
+      </div> <!-- footer__tel__end -->
+      
+      <!-- footer__copy -->
+      <p class="l-footer__copy">
+        <small>©︎2021 Lilian</small>
       </p>
-    </div> <!-- footer__tel__end -->
-    
-    <!-- footer__copy -->
-    <p class="l-footer__copy">
-      <small>©︎2021 Lilian</small>
-    </p>
-  </footer> <!-- footer__end -->
-</div>
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-  <script src="../assets/js/nav.js"></script>
+    </footer> <!-- footer__end -->
+  </div>
+ 
+  <script src="../assets/js/main.js"></script>
 </body>
 </html>
