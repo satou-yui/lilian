@@ -14,8 +14,8 @@
     margin-bottom: 23px;
     &__link {
       width: 80%;
-      background: #d5c0ae;
-      color: #fff;
+      background: #fff;
+      color: $sub-color;
       padding: 10px;
       font-size: 1.1em;
       @include pc {
@@ -24,7 +24,7 @@
         border-radius: 0 !important;
       }
       &:hover {
-        background: #e6d8cb;
+        background: #d5c0ae;
       }
     }
   }
@@ -69,7 +69,9 @@
   
   &__tel {
     text-align: center;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
+    padding-bottom: 10px;
+    // border-bottom: 2px dashed $main-color;
     &-number {
       display: block;
       font-size: 1.6em;
@@ -88,8 +90,8 @@
   
   &__copy {
     text-align: center;
-    background: #fff1e3;
-    color: $font-color;
+    // background: #f3e7dd;
+    // color: $font-color;
     font-size: 1.2em;
     line-height: 2;
   }
