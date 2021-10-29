@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+
+.p-splash {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background:#fff;
+  text-align:center;
+}
+
+.p-splash__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p-splash__logo img {
+  width:100px;
+}
+
+.p-splash__logo__text {
+  font-size: 1.1em;
+}
+
+.p-splash__logo__text {
+  position: absolute;
+  height: 40px;
+  margin: auto;
+  top: 170px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.1em;
+  font-size: 14px;
+  font-weight: lighter;
+  span {
+    display: none;
+  }
+  &::after {
+    animation: txt 5s infinite;
+    content: "";
+  }
+}
+
+@keyframes rt {
+  100% {transform: rotate(360deg);}
+}
+
+@keyframes cw {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  75% {
+    width: 40px;
+    height: 40px;
+  }
+  100% {
+    width: 0;
+    height: 0;
+  }
+}
+
+@keyframes txt {
+  0% {
+    content: "LOADING.";
+  }
+  50% {
+    content: "LOADING..";
+  }
+  100% {
+    content: "LOADING...";
+  }
+}
+// .bound {
+//   display:inline-block;
+//   display:inline-block;
+//   animation: bound .5s ease-in-out infinite alternate;
+  
+// }
+// .bound:nth-child(2) {
+//   animation-delay: 0.3s;
+// }
+// .bound:nth-child(3) {
+//   animation-delay: 0.6s;
+// }
+// @keyframes bound {
+//   0% {transform: translateY(0px);}
+//   100% {transform: translateY(-4px);}
+// }
+
+
+
+.p-splash__logo__img {
+animation: fadeUpAnime 5s linear infinite;
+
+}
+  
+@keyframes fadeUpAnime {
+  from {
+  
+  transform: rotate(0deg);
+  }
+
+  to {
+  
+  transform: rotate(360deg);
+  }
+}
