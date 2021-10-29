@@ -33,6 +33,7 @@
 
 <body>
   <div id="app">
+
     <!--header
     ================================ -->
     <header id="header" class="p-header">
@@ -60,7 +61,7 @@
             ログイン
           </a>
         </div>
-        <!-- hamburger_btn -->
+        <!-- hamburger -->
         <div class="c-hamburger-btn" v-on:click='ActiveBtn=!ActiveBtn'>
           <span class="c-hamburger-btn--line c-hamburger-btn--line--top" 
           v-bind:class="{'c-hamburger-btn--line--top-active':ActiveBtn}"></span>
@@ -69,7 +70,6 @@
           <span class="c-hamburger-btn--line c-hamburger-btn--line--bottom" 
           v-bind:class="{'c-hamburger-btn--line--bottom-active':ActiveBtn}"></span>
         </div>
-
         <transition name="menu">
           <nav class="c-hamburger-btn--menu" v-show="ActiveBtn">
             <ul class="c-hamburger-btn--menu--list">
@@ -252,6 +252,7 @@
       <!--flow
       ================================ -->
       <section id="flow" class="p-flow">
+        <!-- heading -->
         <h2 class="c-heading">お届けまでの流れ</h2>
         <div class="c-pin-wrapper c-pin-wrapper-back-color02">
           <div class="c-pin-wrapper__pin-inner"></div>
@@ -261,7 +262,7 @@
             お申し込み、または停止をお願いします。
           </p>
           <div class="c-pin-wrapper__pin-inner"></div>
-        </div>
+        </div> <!-- heading__end -->
 
         <div class="p-flow__wrapper">
           <ul class="p-flow__wrapper__contents">
@@ -343,12 +344,16 @@
       ================================ -->
       <div class="p-flower-sticky">
         <div class="p-flower-img"></div>
-      </div>
+      </div> 
 
       <!--review
       ================================ -->
       <section id="review" class="p-review">
-        <h2 class="c-heading p-review__heading">ご利用者様の声</h2>
+        <!-- heading -->
+        <h2 class="c-heading p-review__heading">
+          ご利用者様の声
+        </h2> <!-- heading__end -->
+        
         <div class="p-review__contents">
           <div class="p-review__contents__card">
             <div class="p-review__contents__card__item">
@@ -414,8 +419,10 @@
         <!--question
         ================================ -->
         <section id="question" class="p-question">
+          <!-- heading -->
           <h2 class="c-heading">よくある質問</h2>
-    
+          <!-- heading__end -->
+
           <div class="p-question__contents">
             <article class="p-question__contents__item">
               <a href="#" class="p-question__contents__item__link">
@@ -454,7 +461,10 @@
         <!--info
         ================================ -->
         <section id="info" class="p-info">
+          <!-- heading -->
           <h2 class="c-heading">お知らせ</h2>
+          <!-- heading__end -->
+          
           <div class="p-info__contents">
     
             <article class="p-info__contents__item c-arrow">
@@ -538,12 +548,12 @@
     <footer class="l-footer">
       
       <nav class="l-footer__menu">
-        <!-- footer__botton -->
+      <!-- footer__botton -->
       <div class="l-footer__botton">
         <a class="c-botton l-footer__botton__link" href="#header">
           TOPページへ戻る
         </a>
-      </div>
+      </div> <!-- footer__botton__end -->
         <!-- footer__nav -->
         <ul class="l-footer__list">
           <li class="l-footer__item">
@@ -601,10 +611,12 @@
       </p>
     </footer> <!-- footer__end -->
   </div>
+
+  <!-- script -->
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <script src="assets/js/main.js"></script>
   <script src="js/lazysizes.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="assets/js/fade-in.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="assets/js/fade-in.js"></script>
 </body>
 </html>

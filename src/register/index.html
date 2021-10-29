@@ -21,17 +21,18 @@
 <body>
 
   <div id="app">
+
   <!--header
   ================================ -->
   <header class="l-header">
+    <!-- header_logo -->
     <h1 class="l-header__logo">
       <a class="l-header__link" href="../index.html">
         <img src="../assets/images/logo-font.png">
       </a>
-    </h1>
-    <!-- nav -->
-    <!-- hamburger_btn -->
+    </h1> <!-- header__end -->
 
+    <!-- hamburger -->
     <div class="c-hamburger-btn c-hamburger-btn--style u-hamburdger-display" v-on:click='ActiveBtn=!ActiveBtn'>
       <span class="c-hamburger-btn--line c-hamburger-btn--line--top" 
       v-bind:class="{'c-hamburger-btn--line--top-active':ActiveBtn}"></span>
@@ -52,7 +53,7 @@
             <li class="c-hamburger-btn--menu--list--item"><a href="../index.html#info">お知らせ</a></li>
         </ul>
       </nav>
-    </transition>
+    </transition> <!-- hamburger__end -->
 
   </header> <!-- header__end -->
 
@@ -61,44 +62,47 @@
   <!--register
   ================================ -->
   <section class="p-register">
-      <div class="c-pin-wrapper p-register__pin-wrapper">
-        <div class="c-pin-wrapper__pin-inner"></div>
-        <div class="c-pin-wrapper__text-inner">
-          <h2 class="c-pin-inner-heading p-register__heading">お花の定期便の登録</h2>
-          <figure class="c-flower-flow">
-            <img src="../assets/images/register01.png">
-          </figure>
-          <form action="program.php" method="post">
-            <div class="p-register__form">
-              <p class="c-input-heading">メールアドレス
-                <span class="c-label c-label--color01">必須</span>
-              </p>
-              <input class="c-input" type="email" name="email" required>
+    <!-- header -->
+    <div class="c-pin-wrapper p-register__pin-wrapper">
+      <div class="c-pin-wrapper__pin-inner"></div>
+      <div class="c-pin-wrapper__text-inner">
+        <h2 class="c-pin-inner-heading p-register__heading">お花の定期便の登録</h2>
+        <!-- header__end -->
 
-              <p class="c-input-heading">パスワード
-                <span class="c-label c-label--color01">必須</span>
-              </p>
-              <p class="p-register__form__attention">
-                英数字８文字以上１２文字以内
-              </p>
-              <input class="c-input" type="password" name="password" required>
+        <figure class="c-flower-flow">
+          <img src="../assets/images/register01.png">
+        </figure>
+        <form action="program.php" method="post">
+          <div class="p-register__form">
+            <p class="c-input-heading">メールアドレス
+              <span class="c-label c-label--color01">必須</span>
+            </p>
+            <input class="c-input" type="email" name="email" required>
 
-              
-            </div>
-            <input class="c-botton c-register-botton" type="submit" name="submit" value="[次へ]情報の入力をする" onclick="location.href='../select/index.html'">
-          </form>
-          <ul class="p-register__attention">
-            <li class="p-register__attention__item">
-              ・利用規約をお読みになり同意いただける場合、次にお進みください。
-            </li>
-            <li class="p-register__attention__item">
-              ・お届け可能になり次第メールでお知らせいたします。
-            </li>
-          </ul>
-        </div>
-        <div class="c-pin-wrapper__pin-inner"></div>
+            <p class="c-input-heading">パスワード
+              <span class="c-label c-label--color01">必須</span>
+            </p>
+            <p class="p-register__form__attention">
+              英数字８文字以上１２文字以内
+            </p>
+            <input class="c-input" type="password" name="password" required>
+
+            
+          </div>
+          <input class="c-botton c-register-botton" type="submit" name="submit" value="[次へ]情報の入力をする" onclick="location.href='../select/index.html'">
+        </form>
+        <ul class="p-register__attention">
+          <li class="p-register__attention__item">
+            ・利用規約をお読みになり同意いただける場合、次にお進みください。
+          </li>
+          <li class="p-register__attention__item">
+            ・お届け可能になり次第メールでお知らせいたします。
+          </li>
+        </ul>
       </div>
-  </section>
+      <div class="c-pin-wrapper__pin-inner"></div>
+    </div>
+  </section> <!-- register__end -->
 </main>
 
 <!--footer
@@ -106,12 +110,12 @@
   <footer class="l-footer">
     
     <nav class="l-footer__menu">
-      <!-- footer__botton -->
+    <!-- footer_btn -->
     <div class="l-footer__botton">
       <a class="c-botton l-footer__botton__link" href="../index.html">
         TOPページへ戻る
       </a>
-    </div>
+    </div> <!-- footer_btn__enf -->
       <!-- footer__nav -->
       <ul class="l-footer__list">
         <li class="l-footer__item">
@@ -151,7 +155,7 @@
         </li>
 
       </ul>
-    </nav> <!-- footer__nav__end -->
+    </nav> <!-- footer_nav__end -->
     
     <!-- footer__tel -->
     <div class="l-footer__tel">

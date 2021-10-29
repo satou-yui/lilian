@@ -24,23 +24,25 @@
 </head>
 <body>
   <div id="app">
+
     <!--header
     ================================ -->
     <header class="l-header">
+      <!-- header_logo -->
       <h1 class="l-header__logo">
         <a class="l-header__link" href="../index.html">
           <img src="../assets/images/logo-font.png">
         </a>
-      </h1>
-      <!-- hamburger_btn -->
-        <div class="c-hamburger-btn c-hamburger-btn--style u-hamburdger-display" v-on:click='ActiveBtn=!ActiveBtn'>
-          <span class="c-hamburger-btn--line c-hamburger-btn--line--top" 
-          v-bind:class="{'c-hamburger-btn--line--top-active':ActiveBtn}"></span>
-          <span class="c-hamburger-btn--line c-hamburger-btn--line--middle" 
-          v-bind:class="{'c-hamburger-btn--line--middle-active':ActiveBtn}"></span>
-          <span class="c-hamburger-btn--line c-hamburger-btn--line--bottom" 
-          v-bind:class="{'c-hamburger-btn--line--bottom-active':ActiveBtn}"></span>
-        </div>
+      </h1> <!-- header_logo__end -->
+      <!-- hamburger -->
+      <div class="c-hamburger-btn c-hamburger-btn--style u-hamburdger-display" v-on:click='ActiveBtn=!ActiveBtn'>
+        <span class="c-hamburger-btn--line c-hamburger-btn--line--top" 
+        v-bind:class="{'c-hamburger-btn--line--top-active':ActiveBtn}"></span>
+        <span class="c-hamburger-btn--line c-hamburger-btn--line--middle" 
+        v-bind:class="{'c-hamburger-btn--line--middle-active':ActiveBtn}"></span>
+        <span class="c-hamburger-btn--line c-hamburger-btn--line--bottom" 
+        v-bind:class="{'c-hamburger-btn--line--bottom-active':ActiveBtn}"></span>
+      </div>
 
       <transition name="menu">
         <nav class="c-hamburger-btn--menu" v-show="ActiveBtn">
@@ -53,7 +55,7 @@
             <li class="c-hamburger-btn--menu--list--item"><a href="../index.html#info">お知らせ</a></li>
           </ul>
         </nav>
-      </transition>
+      </transition> <!-- hamburger__end -->
 
     </header> <!-- header__end -->
 
@@ -63,19 +65,19 @@
       ================================ -->
       <figure class="c-flower-flow c-flower-flow-margin u-width">
         <img src="../assets/images/register02.png">
-      </figure>
+      </figure> <!-- flower_flow__end -->
 
       <!--flower select
       ================================ -->
       <section class="p-select">
-        <!-- select heading -->
+        <!-- heading -->
         <div class="c-pin-wrapper c-pin-wrapper-back-color02 c-select-pin-wrapper">
           <div class="c-pin-wrapper__pin-inner"></div>
           <div class="c-pin-wrapper__text-inner c-pin-inner-heading-padding">
             <h2 class="c-pin-inner-heading">お花の定期便の登録</h2>
           </div>
           <div class="c-pin-wrapper__pin-inner"></div>
-        </div>
+        </div>  <!-- heading__end -->
 
         <div class="u-width">
           <h2 class="p-select-heading">
@@ -113,13 +115,15 @@
           </div>
         </div>
       </section> <!-- select_end -->
+      
       <!--kind select
       ================================ -->
       <section class="p-kind u-width">
+        <!-- select -->
         <h2 class="p-select-heading">
           お好きなお花の種類の選択
           <span class="c-label c-label--color01">必須</span>
-        </h2>
+        </h2> <!-- select__end -->
 
         <!-- seasonal -->
         <div class="p-kind__wrapper">
@@ -159,7 +163,7 @@
               </label>
             </div>
           </div>
-        </div>
+        </div> <!-- seasonal__end -->
 
         <!-- regular -->
         <div class="p-kind__wrapper">
@@ -212,7 +216,7 @@
               <option value="rose">バラ</option>
             </select>
           </div>
-        </form>
+        </form> <!-- regular__end -->
 
 
         <!-- page-nav -->
@@ -230,7 +234,7 @@
           <li class="p-page-nav__item">
             <span>NEXT</span>
           </li>
-        </ul>
+        </ul> <!-- page-nav__end -->
       </section> <!-- kind_select__end -->
 
       <!--concept color
@@ -408,12 +412,12 @@
     <footer class="l-footer">
       
       <nav class="l-footer__menu">
-        <!-- footer__botton -->
-      <div class="l-footer__botton u-border">
-        <a class="c-botton l-footer__botton__link" href="../index.html">
-          TOPページへ戻る
-        </a>
-      </div>
+        <!-- footer_botton -->
+        <div class="l-footer__botton u-border">
+          <a class="c-botton l-footer__botton__link" href="../index.html">
+            TOPページへ戻る
+          </a>
+        </div> <!-- footer_botton__end -->
         <!-- footer__nav -->
         <ul class="l-footer__list">
           <li class="l-footer__item">
@@ -471,7 +475,8 @@
       </p>
     </footer> <!-- footer__end -->
   </div>
- 
+
+  <!-- script -->
   <script src="../assets/js/main.js"></script>
 </body>
 </html>
