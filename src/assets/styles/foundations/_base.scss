@@ -8,3 +8,6 @@ body {
   color: $font-color;
 }
 
+[v-cloak] {
+  display: none;
+}
