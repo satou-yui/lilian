@@ -41,16 +41,31 @@
     font-size: .9em;
     border: .5px dashed #fff;
     border-right: none;
+    border-bottom: none;
     display: flex;
     justify-content: center;
     align-items: center;
     &:nth-child(even) {
       border-right: .5px dashed #fff;
+      @include pc {
+        border-right: none;
+      }
+    }
+    &:last-child {
+      @include pc {
+        border-right: .5px dashed #fff;
+      }
     }
     @include pc {
       width: 13%;
       border-top: none;
       border-bottom: none;
+    }
+    &--border {
+      border-bottom: .5px dashed #fff;
+      @include pc {
+        border-bottom: none;
+      }
     }
   }
   &__link {
